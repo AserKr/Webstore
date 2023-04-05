@@ -29,17 +29,8 @@ public class Matsedill {
      * a method to set the menu items;
      */
     public void setjaGogn(){
-        veitingar.add(new Veitingar(new SimpleStringProperty("BBQ Pizza"), new SimpleStringProperty("2500")));
-        veitingar.add(new Veitingar(new SimpleStringProperty("Ham Pizza"), new SimpleStringProperty("3600")));
-        veitingar.add(new Veitingar(new SimpleStringProperty("Pepperoni Pizza"), new SimpleStringProperty("2690")));
-        veitingar.add(new Veitingar(new SimpleStringProperty("Garlic bread"), new SimpleStringProperty("1200")));
-        veitingar.add(new Veitingar(new SimpleStringProperty("Carbonara"), new SimpleStringProperty("3590")));
-        veitingar.add(new Veitingar(new SimpleStringProperty("Lasagna"), new SimpleStringProperty("3300")));
-        veitingar.add(new Veitingar(new SimpleStringProperty("Nocco"), new SimpleStringProperty("400")));
-        veitingar.add(new Veitingar(new SimpleStringProperty("Pepsi Max "), new SimpleStringProperty("300")));
-        veitingar.add(new Veitingar(new SimpleStringProperty("Pepsi"), new SimpleStringProperty("300")));
-
-
+        veitingar.add(new Veitingar(new SimpleStringProperty("BBQ Pizza"), new SimpleStringProperty("2500"), new SimpleStringProperty("")));
+        veitingar.add(new Veitingar(new SimpleStringProperty("Ham Pizza"), new SimpleStringProperty("3600"), new SimpleStringProperty("mjá")));
     }
 
 

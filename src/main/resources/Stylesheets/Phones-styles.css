@@ -1,0 +1,11 @@
+.ImageView {
+-fx-image:
+   url("myndir/Phone1.jpg");
+}
+
+.position {
+-fx-background-size:contain;
+-fx-background-position: center;
+-fx-background-repeat: no-repeat;
+}
+
