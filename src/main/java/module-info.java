@@ -1,8 +1,10 @@
 module hi.jaser.webstore {
-    requires javafx.controls;
-    requires javafx.fxml;
+        requires javafx.controls;
+        requires javafx.fxml;
 
+        opens vinnsla;
+        exports vinnsla to javafx.fxml;
 
-    opens hi.jaser.webstore to javafx.fxml;
-    exports hi.jaser.webstore;
-}
+        exports hi.jaser.webstore;
+        opens hi.jaser.webstore;
+        }
