@@ -26,7 +26,7 @@ public class PontunController {
     @FXML
     Button fxInnskraning;
     private int whichItem = 0;
-    private int whichItemkarfa = 0;
+
 
     public Karfa karfa;
 
@@ -49,7 +49,7 @@ Matsedill menu;
         menu.setjaGogn();
 
         password = new Password(new SimpleStringProperty(null));
-        fxHeildarverd.setText("Total Price: 0 kr.");
+        fxHeildarverd.setText("Total Price: 0");
         karfa.getObs().addListener((ListChangeListener<? super Veitingar>) change -> {
             System.out.println("Breyting");
             int heild = 0;
@@ -57,7 +57,7 @@ Matsedill menu;
                 heild = heild + karfa.getVerd(i);
             }
             karfa.setHeildarverd(heild);
-            fxHeildarverd.setText("Total Price: " + String.valueOf(heild)+ " kr.");
+            fxHeildarverd.setText("Total Price: " + String.valueOf(heild)+ karfa.getCurrency());
         });
         /*menuItems.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
         menuItems.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
@@ -73,29 +73,6 @@ Matsedill menu;
     }
 
 
-
-
-    @FXML
-    private void fxsetjakorfuHandler(ActionEvent e) {
-        if (whichItem != -1) {
-            karfa.getObs().add(menuItems.getItems().get(whichItem));
-            fxKarfa.setItems(karfa.getObs());
-
-        }
-        fxgreida.disableProperty().bind(karfa.isemptyProperty());
-
-    }
-
-    @FXML
-
-    private void fxtakaurKorfuHandler(ActionEvent e) {
-        if (whichItemkarfa != -1&&whichItemkarfa<karfa.getsize()) {
-            karfa.deleteitem(whichItemkarfa);
-            fxKarfa.setItems(karfa.getObs());
-
-        }
-        fxgreida.disableProperty().bind(karfa.isemptyProperty());
-    }
 
     @FXML
     private void fxInnskraningHandler(ActionEvent e) {

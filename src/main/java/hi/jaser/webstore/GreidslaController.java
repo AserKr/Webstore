@@ -2,7 +2,9 @@ package hi.jaser.webstore;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -11,25 +13,29 @@ import vinnsla.Vidskiptavinur;
 
 public class GreidslaController {
     @FXML
-     Label fxDelivery;
+    Label fxDelivery;
     @FXML
-     Button fxTilbaka;
+    Button fxTilbaka;
     @FXML
     ListView fxKarfa;
     @FXML
     Label totalprice;
+    @FXML
+    Button fxremove;
 
 
     private PontunController pontunController;
     private Vidskiptavinur user;
-
-
+    private int whichItemkarfa = 0;
+    @FXML
+    ComboBox fxCurrencyBox;
+    ObservableList<String> currencies = FXCollections.observableArrayList("USD", "ISK", "EUR");
     private StringProperty delivery = new SimpleStringProperty();
 
-    private static final String nameofStore="Aser Trattoria";
-    private static final String message="Your Order Has been confirmed!";
-    private static final String message1="Aser Trattoria appreciates your support!";
-    private static final String Okay ="Back";
+    private static final String nameofStore = "Aser Trattoria";
+    private static final String message = "Your Order Has been confirmed!";
+    private static final String message1 = "Aser Trattoria appreciates your support!";
+    private static final String Okay = "Back";
 
     /**
      * creates the setup and bindings for the payment scene, binds the payment scene with variables from the main (PONTUN) scene
@@ -41,7 +47,7 @@ public class GreidslaController {
         pontunController = (PontunController) ViewSwitcher.lookup(View.PONTUN);
         totalprice.textProperty().bind(pontunController.getFxHeildarverd().textProperty());
         setDelivery("Your order will be delivered after 15 minutes");
-      user.nameProperty().addListener((observable, oldValue, newValue) -> {
+        user.nameProperty().addListener((observable, oldValue, newValue) -> {
             setDelivery("Your order will be delivered after 15 minutes to " + user.getName() + " at " + user.getAddress());
         });
         user.addressProperty().addListener((observable, oldValue, newValue) -> {
@@ -49,39 +55,67 @@ public class GreidslaController {
         });
         user.nameProperty().bind(pontunController.getUser().nameProperty());
         user.addressProperty().bind(pontunController.getUser().addressProperty());
-for (int i=0; i<pontunController.karfa.getsize();i++){
-    fxKarfa.getItems().add(pontunController.karfa.getObs().get(i));
-}
-pontunController.karfa.getObs().addListener((ListChangeListener<? super Veitingar>) change -> {
-        fxKarfa.getItems().add(pontunController.karfa.getObs().get(pontunController.karfa.getsize()-1));
-});
-};
+        fxCurrencyBox.setItems(currencies);
 
+        for (int i = 0; i < pontunController.karfa.getsize(); i++) {
+            fxKarfa.getItems().add(pontunController.karfa.getObs().get(i));
+        }
+        pontunController.karfa.getObs().addListener((ListChangeListener<? super Veitingar>) change -> {
+            /*   fxKarfa.getItems().add(pontunController.karfa.getObs().get(pontunController.karfa.getsize()-1));*/
+            fxKarfa.setItems(pontunController.karfa.getObs());
+            System.out.println(fxKarfa.getItems().size());
+            System.out.println(pontunController.karfa.getsize());
+            ;
+
+        });
+
+ /*fxKarfa.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        fxKarfa.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            // Indexinn í listanum.
+            whichItemkarfa = fxKarfa.getSelectionModel().getSelectedIndex();
+        });*/
+    }
+
+    ;
 
 
     @FXML
 
-    private void fxTilBakaHandler (ActionEvent e){
+    private void fxTilBakaHandler(ActionEvent e) {
         ViewSwitcher.switchTo(View.PONTUN);
     }
+
     @FXML
 
-    private void fxStadfestingHandler (ActionEvent e){
+    private void fxStadfestingHandler(ActionEvent e) {
         pontunController.fxgreida.disableProperty().bind(pontunController.karfa.isemptyProperty());
         ButtonType bType = new ButtonType(Okay,
                 ButtonBar.ButtonData.OK_DONE);
         Alert a = stofnaAlert(bType);
         a.showAndWait();
     }
+
     private Alert stofnaAlert(ButtonType bILagi) {
         // Væri hægt að segja Alert.AlertType.CONFIRMATION en þá stjórnum við ekki útliti hnappanna
-        Alert a = new Alert(Alert.AlertType.NONE,  message, bILagi);
+        Alert a = new Alert(Alert.AlertType.NONE, message, bILagi);
         a.setTitle(nameofStore);
         a.setHeaderText(message1);
         return a;
 
     }
 
+
+    @FXML
+
+    private void fxremovefromcart(ActionEvent e) {
+        if (fxKarfa.getSelectionModel().getSelectedItems().size() > 0) {
+            int index = fxKarfa.getSelectionModel().getSelectedIndex();
+            pontunController.karfa.deleteitem(index);
+            fxKarfa.setItems(pontunController.karfa.getObs());
+
+        }
+
+    }
 
 
     public StringProperty deliveryProperty() {
@@ -92,4 +126,11 @@ pontunController.karfa.getObs().addListener((ListChangeListener<? super Veitinga
         this.delivery.set(delivery);
     }
 
-}
+    public void currencyChange(ActionEvent actionEvent) {
+        String selectedCurrency = (String) fxCurrencyBox.getSelectionModel().getSelectedItem();
+        pontunController.karfa.setCurrency(selectedCurrency);
+        pontunController.getFxHeildarverd().textProperty().bind(pontunController.karfa.currencyProperty());
+
+
+        }
+    }

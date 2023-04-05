@@ -1,12 +1,12 @@
 package vinnsla;
 
-import javafx.beans.property.BooleanProperty;
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.SimpleBooleanProperty;
+import javafx.beans.property.*;
 
 public class Karfa extends Matsedill{
 
 
+
+    StringProperty currency = new SimpleStringProperty();
     private IntegerProperty heildarverd;
     private BooleanProperty isemptyprop = new SimpleBooleanProperty();
 
@@ -34,10 +34,16 @@ public class Karfa extends Matsedill{
     }
 
 
+    public String getCurrency() {
+        return currency.get();
+    }
 
+    public StringProperty currencyProperty() {
+        return currency;
+    }
 
-
-
-
+    public void setCurrency(String currency) {
+        this.currency.set(currency);
+    }
 
 }
