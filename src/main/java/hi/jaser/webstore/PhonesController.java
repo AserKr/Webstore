@@ -10,7 +10,6 @@ public class PhonesController {
     ImageView fxPhone1;
 
     public void initialize() {
-        fxPhone1.getStyleClass().add("Phone-styles.css");
     }
     @FXML
     private void fxTilBakaHandler (ActionEvent e){

@@ -20,8 +20,6 @@ public class MatsedillView extends ListView {
         Matsedill local = new Matsedill();
         local.setjaGogn();
         setItems(local.getVeitingar());
-
-
     }
 
 
