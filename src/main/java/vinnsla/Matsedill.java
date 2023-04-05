@@ -29,7 +29,7 @@ public class Matsedill {
      * a method to set the menu items;
      */
     public void setjaGogn(){
-        veitingar.add(new Veitingar(new SimpleStringProperty("BBQ Pizza"), new SimpleStringProperty("2500"), new SimpleStringProperty("")));
+        veitingar.add(new Veitingar(new SimpleStringProperty("Phone1"), new SimpleStringProperty("2500"), new SimpleStringProperty("")));
         veitingar.add(new Veitingar(new SimpleStringProperty("Ham Pizza"), new SimpleStringProperty("3600"), new SimpleStringProperty("mjá")));
     }
 
