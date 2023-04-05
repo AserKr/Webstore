@@ -5,9 +5,9 @@ public enum View {
     VIDSKIPTAVINUR("vidskiptavinur-view.fxml"),
     PONTUN("pontun-view.fxml"),
     PHONES("phones-view.fxml"),
-    TABLETS("menu-view.fxml"),
-    LAPTOPS("menu-view.fxml"),
-    ACCESSORIES("menu-view.fxml"),
+    TABLETS("tablets-view.fxml"),
+    LAPTOPS("laptops-view.fxml"),
+    ACCESSORIES("accessories-view.fxml"),
 
     JOB("job-view.fxml"),
     GREIDSLA("greidsla-view.fxml");

@@ -1,0 +1,4 @@
+#fxAccessory1 {
+-fx-image: url("Accessory1.jpg");
+-fx-image-repeat: no-repeat;
+}
