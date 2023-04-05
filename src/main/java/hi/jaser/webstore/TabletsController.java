@@ -6,11 +6,12 @@ import javafx.scene.image.ImageView;
 
 public class TabletsController {
 
+    PontunController pontunController;
     @FXML
     ImageView fxTablet1;
 
     public void initialize() {
-        fxTablet1.getStyleClass().add("Phone-styles.css");
+        pontunController = (PontunController) ViewSwitcher.lookup(View.PONTUN);
     }
     @FXML
     private void fxTilBakaHandler (ActionEvent e){
@@ -18,4 +19,21 @@ public class TabletsController {
     }
 
 
+    @FXML
+    private void fxBuyTablet(ActionEvent e) {
+        pontunController.karfa.getObs().add(pontunController.menu.getObs().get(4));
+    }
+    @FXML
+    private void fxBuyTablet2(ActionEvent e) {
+        pontunController.karfa.getObs().add(pontunController.menu.getObs().get(5));
+    }
+
+    @FXML
+    private void fxBuyTablet3(ActionEvent e) {
+        pontunController.karfa.getObs().add(pontunController.menu.getObs().get(6));
+    }
+    @FXML
+    private void fxBuyTablet4(ActionEvent e) {
+        pontunController.karfa.getObs().add(pontunController.menu.getObs().get(7));
+    }
 }

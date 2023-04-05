@@ -7,7 +7,7 @@ import javafx.scene.image.ImageView;
 import vinnsla.Veitingar;
 
 public class PhonesController {
-PontunController pontunController;
+    PontunController pontunController;
     @FXML
     ImageView fxPhone1;
 
@@ -23,11 +23,18 @@ PontunController pontunController;
     @FXML
     private void fxBuyPhone(ActionEvent e) {
             pontunController.karfa.getObs().add(pontunController.menu.getObs().get(0));
-
     }
     @FXML
     private void fxBuyPhone2(ActionEvent e) {
         pontunController.karfa.getObs().add(pontunController.menu.getObs().get(1));
+    }
 
+    @FXML
+    private void fxBuyPhone3(ActionEvent e) {
+        pontunController.karfa.getObs().add(pontunController.menu.getObs().get(2));
+    }
+    @FXML
+    private void fxBuyPhone4(ActionEvent e) {
+        pontunController.karfa.getObs().add(pontunController.menu.getObs().get(3));
     }
 }

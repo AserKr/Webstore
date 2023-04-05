@@ -31,6 +31,21 @@ public class Matsedill {
     public void setjaGogn(){
         veitingar.add(new Veitingar(new SimpleStringProperty("iPhone1"), new SimpleStringProperty("2500")));
         veitingar.add(new Veitingar(new SimpleStringProperty("iPhone2"), new SimpleStringProperty("3600")));
+        veitingar.add(new Veitingar(new SimpleStringProperty("iPhone3"), new SimpleStringProperty("2500")));
+        veitingar.add(new Veitingar(new SimpleStringProperty("iPhone4"), new SimpleStringProperty("3600")));
+        veitingar.add(new Veitingar(new SimpleStringProperty("Tablet1"), new SimpleStringProperty("3600")));
+        veitingar.add(new Veitingar(new SimpleStringProperty("Tablet2"), new SimpleStringProperty("3600")));
+        veitingar.add(new Veitingar(new SimpleStringProperty("Tablet3"), new SimpleStringProperty("3600")));
+        veitingar.add(new Veitingar(new SimpleStringProperty("Tablet4"), new SimpleStringProperty("3600")));
+        veitingar.add(new Veitingar(new SimpleStringProperty("Laptop1"), new SimpleStringProperty("3600")));
+        veitingar.add(new Veitingar(new SimpleStringProperty("Laptop2"), new SimpleStringProperty("3600")));
+        veitingar.add(new Veitingar(new SimpleStringProperty("Laptop3"), new SimpleStringProperty("3600")));
+        veitingar.add(new Veitingar(new SimpleStringProperty("Laptop4"), new SimpleStringProperty("3600")));
+        veitingar.add(new Veitingar(new SimpleStringProperty("Accessory1"), new SimpleStringProperty("3600")));
+        veitingar.add(new Veitingar(new SimpleStringProperty("Accessory2"), new SimpleStringProperty("3600")));
+        veitingar.add(new Veitingar(new SimpleStringProperty("Accessory3"), new SimpleStringProperty("3600")));
+        veitingar.add(new Veitingar(new SimpleStringProperty("Accessory4"), new SimpleStringProperty("3600")));
+
     }
 
 

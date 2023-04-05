@@ -6,16 +6,34 @@ import javafx.scene.image.ImageView;
 
 public class LaptopsController {
 
+    PontunController pontunController;
     @FXML
     ImageView fxLaptop1;
 
     public void initialize() {
-        fxLaptop1.getStyleClass().add("Phone-styles.css");
+        pontunController = (PontunController) ViewSwitcher.lookup(View.PONTUN);
     }
     @FXML
     private void fxTilBakaHandler (ActionEvent e){
         ViewSwitcher.switchTo(View.PONTUN);
     }
 
+    @FXML
+    private void fxBuyLaptop(ActionEvent e) {
+        pontunController.karfa.getObs().add(pontunController.menu.getObs().get(8));
+    }
+    @FXML
+    private void fxBuyLaptop2(ActionEvent e) {
+        pontunController.karfa.getObs().add(pontunController.menu.getObs().get(9));
+    }
+
+    @FXML
+    private void fxBuyLaptop3(ActionEvent e) {
+        pontunController.karfa.getObs().add(pontunController.menu.getObs().get(10));
+    }
+    @FXML
+    private void fxBuyLaptop4(ActionEvent e) {
+        pontunController.karfa.getObs().add(pontunController.menu.getObs().get(11));
+    }
 
 }
