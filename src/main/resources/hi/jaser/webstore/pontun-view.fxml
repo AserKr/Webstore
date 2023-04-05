@@ -15,9 +15,9 @@
       <ButtonBar layoutX="6.0" layoutY="14.0" prefHeight="40.0" prefWidth="631.0">
          <buttons>
             <Button fx:id="fxPhones" mnemonicParsing="false" onAction="#fxPhonesHandler" text="Phones" />
-            <Button fx:id="fxTablets" mnemonicParsing="false" text="Tablets" />
-            <Button fx:id="fxLaptops" mnemonicParsing="false" text="Laptops" />
-            <Button fx:id="fxAccessories" mnemonicParsing="false" text="Accessories" />
+            <Button fx:id="fxTablets" mnemonicParsing="false" onAction="#fxTabletsHandler" text="Tablets" />
+            <Button fx:id="fxLaptops" mnemonicParsing="false" onAction="#fxLaptopsHandler" text="Laptops" />
+            <Button fx:id="fxAccessories" mnemonicParsing="false" onAction="#fxAccessoriesHandler" text="Accessories" />
             <Button fx:id="fxInnskraning" mnemonicParsing="false" onAction="#fxInnskraningHandler" prefHeight="33.0" prefWidth="119.0" text="Sign in" />
          </buttons>
       </ButtonBar>

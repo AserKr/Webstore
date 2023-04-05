@@ -108,6 +108,21 @@ public class PontunController {
     }
 
     @FXML
+    private void fxLaptopsHandler() {
+        ViewSwitcher.switchTo(View.LAPTOPS);
+    }
+
+    @FXML
+    private void fxTabletsHandler() {
+        ViewSwitcher.switchTo(View.TABLETS);
+    }
+
+    @FXML
+    private void fxAccessoriesHandler() {
+        ViewSwitcher.switchTo(View.ACCESSORIES);
+    }
+
+    @FXML
     private void fxgreidaHandler() {
         ViewSwitcher.switchTo(View.GREIDSLA);
     }
