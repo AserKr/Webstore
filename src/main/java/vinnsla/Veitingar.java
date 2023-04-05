@@ -8,17 +8,16 @@ public class Veitingar {
     private StringProperty nafn = new SimpleStringProperty();
     private StringProperty verd = new SimpleStringProperty();
 
-    private StringProperty image = new SimpleStringProperty();
+
 
     /**
      * a constructor for the menu items
      * @param nafn name of the food
      * @param verd price of the food
      */
-    public Veitingar (StringProperty nafn, StringProperty verd, StringProperty image){
+    public Veitingar (StringProperty nafn, StringProperty verd){
         this.nafn=nafn;
         this.verd=verd;
-        this.image=image;
     }
     public String getVerd() {
         return verd.get();

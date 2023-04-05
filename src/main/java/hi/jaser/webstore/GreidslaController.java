@@ -2,9 +2,11 @@ package hi.jaser.webstore;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import javafx.collections.ListChangeListener;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import vinnsla.Veitingar;
 import vinnsla.Vidskiptavinur;
 
 public class GreidslaController {
@@ -12,6 +14,8 @@ public class GreidslaController {
      Label fxDelivery;
     @FXML
      Button fxTilbaka;
+    @FXML
+    ListView fxKarfa;
     @FXML
     Label totalprice;
 
@@ -25,7 +29,7 @@ public class GreidslaController {
     private static final String nameofStore="Aser Trattoria";
     private static final String message="Your Order Has been confirmed!";
     private static final String message1="Aser Trattoria appreciates your support!";
-    private static final String Okay ="Okay";
+    private static final String Okay ="Back";
 
     /**
      * creates the setup and bindings for the payment scene, binds the payment scene with variables from the main (PONTUN) scene
@@ -45,10 +49,15 @@ public class GreidslaController {
         });
         user.nameProperty().bind(pontunController.getUser().nameProperty());
         user.addressProperty().bind(pontunController.getUser().addressProperty());
+for (int i=0; i<pontunController.karfa.getsize();i++){
+    fxKarfa.getItems().add(pontunController.karfa.getObs().get(i));
+}
+pontunController.karfa.getObs().addListener((ListChangeListener<? super Veitingar>) change -> {
+        fxKarfa.getItems().add(pontunController.karfa.getObs().get(pontunController.karfa.getsize()-1));
+});
+};
 
-        fxDelivery.textProperty().bind(deliveryProperty());
 
-    }
 
     @FXML
 
@@ -58,10 +67,6 @@ public class GreidslaController {
     @FXML
 
     private void fxStadfestingHandler (ActionEvent e){
-        int j= pontunController.karfa.getsize();
-        pontunController.karfa.getObs().remove(0, j);
-        pontunController.fxKarfa.setItems( null);
-        ViewSwitcher.switchTo(View.PONTUN);
         pontunController.fxgreida.disableProperty().bind(pontunController.karfa.isemptyProperty());
         ButtonType bType = new ButtonType(Okay,
                 ButtonBar.ButtonData.OK_DONE);

@@ -7,14 +7,13 @@ import javafx.scene.image.ImageView;
 import vinnsla.Veitingar;
 
 public class PhonesController {
-
+PontunController pontunController;
     @FXML
     ImageView fxPhone1;
 
-    @FXML
-    private ListView<Veitingar> menuItems;
 
     public void initialize() {
+        pontunController = (PontunController) ViewSwitcher.lookup(View.PONTUN);
     }
     @FXML
     private void fxTilBakaHandler (ActionEvent e){
@@ -23,8 +22,12 @@ public class PhonesController {
 
     @FXML
     private void fxBuyPhone(ActionEvent e) {
-
+            pontunController.karfa.getObs().add(pontunController.menu.getObs().get(0));
 
     }
+    @FXML
+    private void fxBuyPhone2(ActionEvent e) {
+        pontunController.karfa.getObs().add(pontunController.menu.getObs().get(1));
 
+    }
 }

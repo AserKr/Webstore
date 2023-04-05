@@ -29,6 +29,11 @@ public class PontunController {
     private int whichItemkarfa = 0;
 
     public Karfa karfa;
+
+    public ListView<Veitingar> getMenuItems() {
+        return menuItems;
+    }
+Matsedill menu;
     @FXML
     private ListView<Veitingar> menuItems;
     private Vidskiptavinur user;
@@ -40,7 +45,9 @@ public class PontunController {
     private void initialize() {
         user = new Vidskiptavinur(new SimpleStringProperty(null), new SimpleStringProperty(null));
         karfa = new Karfa(new SimpleIntegerProperty(0));
-       /* menu = new Matsedill();*/
+        menu = new Matsedill();
+        menu.setjaGogn();
+
         password = new Password(new SimpleStringProperty(null));
         fxHeildarverd.setText("Total Price: 0 kr.");
         karfa.getObs().addListener((ListChangeListener<? super Veitingar>) change -> {
