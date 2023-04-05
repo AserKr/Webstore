@@ -15,11 +15,11 @@
       <ImageView fitHeight="388.0" fitWidth="607.0" layoutX="22.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true" />
       <HBox prefHeight="42.0" prefWidth="643.0">
          <children>
-            <Button fx:id="fxPhones" mnemonicParsing="false" onAction="#fxPhonesHandler" prefHeight="45.0" prefWidth="129.0" text="Phones" />
-            <Button fx:id="fxTablets" mnemonicParsing="false" onAction="#fxTabletsHandler" prefHeight="45.0" prefWidth="129.0" text="Tablets" />
-            <Button fx:id="fxLaptops" mnemonicParsing="false" onAction="#fxLaptopsHandler" prefHeight="45.0" prefWidth="129.0" text="Laptops" />
-            <Button fx:id="fxAccessories" mnemonicParsing="false" onAction="#fxAccessoriesHandler" prefHeight="45.0" prefWidth="129.0" text="Accessories" />
-            <Button fx:id="fxInnskraning" mnemonicParsing="false" onAction="#fxInnskraningHandler" prefHeight="45.0" prefWidth="129.0" text="Sign in" />
+            <Button fx:id="fxPhones" mnemonicParsing="false" onAction="#fxPhonesHandler" prefHeight="45.0" prefWidth="129.0" styleClass="button1" stylesheets="@../../../Stylesheets/Button-Style.css" text="Phones" />
+            <Button fx:id="fxTablets" mnemonicParsing="false" onAction="#fxTabletsHandler" prefHeight="45.0" prefWidth="129.0" styleClass="button1" stylesheets="@../../../Stylesheets/Button-Style.css" text="Tablets" />
+            <Button fx:id="fxLaptops" mnemonicParsing="false" onAction="#fxLaptopsHandler" prefHeight="45.0" prefWidth="129.0" styleClass="button1" stylesheets="@../../../Stylesheets/Button-Style.css" text="Laptops" />
+            <Button fx:id="fxAccessories" mnemonicParsing="false" onAction="#fxAccessoriesHandler" prefHeight="45.0" prefWidth="129.0" styleClass="button1" stylesheets="@../../../Stylesheets/Button-Style.css" text="Accessories" />
+            <Button fx:id="fxInnskraning" mnemonicParsing="false" onAction="#fxInnskraningHandler" prefHeight="45.0" prefWidth="129.0" styleClass="button1" stylesheets="@../../../Stylesheets/Button-Style.css" text="Sign in" />
          </children>
       </HBox>
 

@@ -23,11 +23,7 @@ public class PhonesController {
 
     @FXML
     private void fxBuyPhone(ActionEvent e) {
-            karfa.getObs().add(menuItems.getItems().get(1));
-            fxKarfa.setItems(karfa.getObs());
 
-
-        fxgreida.disableProperty().bind(karfa.isemptyProperty());
 
     }
 
