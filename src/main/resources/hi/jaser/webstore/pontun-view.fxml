@@ -1,20 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import hi.jaser.webstore.MatsedillView?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 
 <Pane fx:id="main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="643.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.jaser.webstore.PontunController">
    <children>
-      <Button fx:id="fxSetjaKorfu" layoutX="440.0" layoutY="471.0" mnemonicParsing="false" onAction="#fxsetjakorfuHandler" prefHeight="33.0" prefWidth="70.0" text="Add" />
-      <Button fx:id="fxTakaUrKorfu" layoutX="510.0" layoutY="471.0" mnemonicParsing="false" onAction="#fxtakaurKorfuHandler" prefHeight="33.0" prefWidth="70.0" text="Remove" />
-      <Button fx:id="fxgreida" layoutX="475.0" layoutY="517.0" mnemonicParsing="false" onAction="#fxgreidaHandler" prefHeight="33.0" prefWidth="70.0" text="Pay" />
-      <Button fx:id="fxInnskraning" layoutX="411.0" layoutY="33.0" mnemonicParsing="false" onAction="#fxInnskraningHandler" prefHeight="33.0" prefWidth="199.0" text="Sign in" />
+      <Button fx:id="fxSetjaKorfu" layoutX="435.0" layoutY="471.0" mnemonicParsing="false" onAction="#fxsetjakorfuHandler" prefHeight="33.0" prefWidth="70.0" text="Add" />
+      <Button fx:id="fxTakaUrKorfu" layoutX="505.0" layoutY="471.0" mnemonicParsing="false" onAction="#fxtakaurKorfuHandler" prefHeight="33.0" prefWidth="70.0" text="Remove" />
+      <Button fx:id="fxgreida" layoutX="540.0" layoutY="522.0" mnemonicParsing="false" onAction="#fxgreidaHandler" prefHeight="33.0" prefWidth="70.0" text="Pay" />
       <Label fx:id="fxHeildarverd" alignment="CENTER" contentDisplay="RIGHT" layoutX="411.0" layoutY="422.0" prefHeight="48.0" prefWidth="199.0" />
-      <ListView fx:id="fxKarfa" layoutX="411.0" layoutY="86.0" prefHeight="336.0" prefWidth="199.0" />
-      <MatsedillView fx:id="menuItems" layoutX="38.0" layoutY="57.0" prefHeight="477.0" prefWidth="261.0" />
+      <ButtonBar layoutX="6.0" layoutY="14.0" prefHeight="40.0" prefWidth="631.0">
+         <buttons>
+            <Button fx:id="fxPhones" mnemonicParsing="false" onAction="#fxPhonesHandler" text="Phones" />
+            <Button fx:id="fxTablets" mnemonicParsing="false" text="Tablets" />
+            <Button fx:id="fxLaptops" mnemonicParsing="false" text="Laptops" />
+            <Button fx:id="fxAccessories" mnemonicParsing="false" text="Accessories" />
+            <Button fx:id="fxInnskraning" mnemonicParsing="false" onAction="#fxInnskraningHandler" prefHeight="33.0" prefWidth="119.0" text="Sign in" />
+         </buttons>
+      </ButtonBar>
+      <ImageView fitHeight="388.0" fitWidth="607.0" layoutX="22.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true" />
+
 
    </children>
 </Pane>

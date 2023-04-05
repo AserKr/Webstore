@@ -52,17 +52,17 @@ public class PontunController {
             karfa.setHeildarverd(heild);
             fxHeildarverd.setText("Total Price: " + String.valueOf(heild)+ " kr.");
         });
-        menuItems.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        /*menuItems.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
         menuItems.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             // Indexinn í listanum.
             whichItem = menuItems.getSelectionModel().getSelectedIndex();
-        });
-        fxKarfa.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        });*/
+        /*fxKarfa.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
         fxKarfa.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             // Indexinn í listanum.
             whichItemkarfa = fxKarfa.getSelectionModel().getSelectedIndex();
         });
-        fxgreida.disableProperty().bind(karfa.isemptyProperty());
+        fxgreida.disableProperty().bind(karfa.isemptyProperty());*/
     }
 
 
@@ -99,6 +99,12 @@ public class PontunController {
         }
 
 
+    }
+
+
+    @FXML
+    private void fxPhonesHandler() {
+        ViewSwitcher.switchTo(View.PHONES);
     }
 
     @FXML
