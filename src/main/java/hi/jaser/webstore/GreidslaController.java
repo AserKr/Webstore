@@ -94,8 +94,9 @@ public class GreidslaController {
         pontunController.fxgreida.disableProperty().bind(pontunController.karfa.isemptyProperty());
         ButtonType bType = new ButtonType(Okay,
                 ButtonBar.ButtonData.OK_DONE);
-        Alert a = stofnaAlert(bType);
-        a.showAndWait();
+        /*Alert a = stofnaAlert(bType);
+        a.showAndWait();*/
+        ViewSwitcher.switchTo(View.DELIVERYMETHOD);
     }
 
     private Alert stofnaAlert(ButtonType bILagi) {

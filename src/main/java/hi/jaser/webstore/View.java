@@ -10,7 +10,10 @@ public enum View {
     ACCESSORIES("accessories-view.fxml"),
 
     JOB("job-view.fxml"),
-    GREIDSLA("greidsla-view.fxml");
+
+    GREIDSLA("greidsla-view.fxml"),
+
+    DELIVERYMETHOD("deliverymethod-view.fxml");
 
     private final String fileName;
     View(String fileName) {
