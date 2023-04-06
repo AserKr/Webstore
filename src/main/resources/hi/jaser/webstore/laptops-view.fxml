@@ -12,7 +12,7 @@
         <Pane prefHeight="613.0" prefWidth="595.0" style="-fx-background-color: white;">
             <children>
                 <Button fx:id="fxBack" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#fxTilBakaHandler" text="Back" />
-                <Button fx:id="fxBuy" layoutX="129.0" layoutY="276.0" mnemonicParsing="false" onAction="#fxBuyLaptop" styleClass="button1" stylesheets="@../../../Stylesheets/Button-Style.css" text="Buy" />
+                <Button fx:id="fxBuy" layoutX="227.0" layoutY="276.0" mnemonicParsing="false" onAction="#fxBuyLaptop" styleClass="button1" stylesheets="@../../../Stylesheets/Button-Style.css" text="Buy" />
                 <ImageView fx:id="fxLaptop1" fitHeight="150.0" fitWidth="142.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true" styleClass="Phones-styles.css" />
                 <Button fx:id="fxKarfa" layoutX="475.0" layoutY="27.0" mnemonicParsing="false" onAction="#fxgreidaHandler" prefHeight="39.0" prefWidth="73.0" text="Karfa" />
                 <Label fx:id="fxDescription1" alignment="TOP_LEFT" layoutX="129.0" layoutY="138.0" prefHeight="126.0" prefWidth="149.0" wrapText="true" />
@@ -26,21 +26,25 @@
                     </font></Label>
                 <ImageView fx:id="fxLaptop2" fitHeight="150.0" fitWidth="142.0" layoutX="298.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true" styleClass="Phones-styles.css" />
                 <Label fx:id="fxDescription2" alignment="TOP_LEFT" layoutX="438.0" layoutY="138.0" prefHeight="126.0" prefWidth="141.0" wrapText="true" />
-                <Button fx:id="fxBuy2" layoutX="418.0" layoutY="276.0" mnemonicParsing="false" onAction="#fxBuyLaptop2" styleClass="button1" stylesheets="@../../../Stylesheets/Button-Style.css" text="Buy" />
-                <Button fx:id="fxBuy3" layoutX="129.0" layoutY="564.0" mnemonicParsing="false" onAction="#fxBuyLaptop3" styleClass="button1" stylesheets="@../../../Stylesheets/Button-Style.css" text="Buy" />
+                <Button fx:id="fxBuy2" layoutX="512.0" layoutY="277.0" mnemonicParsing="false" onAction="#fxBuyLaptop2" styleClass="button1" stylesheets="@../../../Stylesheets/Button-Style.css" text="Buy" />
+                <Button fx:id="fxBuy3" layoutX="227.0" layoutY="564.0" mnemonicParsing="false" onAction="#fxBuyLaptop3" styleClass="button1" stylesheets="@../../../Stylesheets/Button-Style.css" text="Buy" />
                 <ImageView fx:id="fxLaptop3" fitHeight="150.0" fitWidth="142.0" layoutX="-13.0" layoutY="442.0" pickOnBounds="true" preserveRatio="true" styleClass="Phones-styles.css" />
                 <Label fx:id="fxDescription3" alignment="TOP_LEFT" layoutX="126.0" layoutY="421.0" prefHeight="127.0" prefWidth="141.0" text="Label" wrapText="true" />
                 <Label layoutX="36.0" layoutY="386.0" prefHeight="27.0" prefWidth="126.0" text="MacBook Air">
                     <font>
                         <Font size="18.0" />
                     </font></Label>
-                <Button fx:id="fxBuy4" layoutX="418.0" layoutY="564.0" mnemonicParsing="false" onAction="#fxBuyLaptop4" styleClass="button1" stylesheets="@../../../Stylesheets/Button-Style.css" text="Buy" />
+                <Button fx:id="fxBuy4" layoutX="512.0" layoutY="564.0" mnemonicParsing="false" onAction="#fxBuyLaptop4" styleClass="button1" stylesheets="@../../../Stylesheets/Button-Style.css" text="Buy" />
                 <ImageView fx:id="fxLaptop4" fitHeight="150.0" fitWidth="142.0" layoutX="276.0" layoutY="417.0" pickOnBounds="true" preserveRatio="true" styleClass="Phones-styles.css" />
                 <Label fx:id="fxDescription4" alignment="TOP_LEFT" layoutX="425.0" layoutY="426.0" prefHeight="121.0" prefWidth="152.0" text="Label" wrapText="true" />
                 <Label layoutX="307.0" layoutY="386.0" prefHeight="27.0" prefWidth="188.0" text="Galaxy Book Pro">
                     <font>
                         <Font size="18.0" />
                     </font></Label>
+            <Label layoutX="19.0" layoutY="274.0" prefHeight="32.0" prefWidth="198.0" text="249.990ISK/1.851USD/1.785EUR" />
+            <Label layoutX="309.0" layoutY="274.0" prefHeight="32.0" prefWidth="196.0" text="169.000ISK/1.252USD/1.207EUR" />
+            <Label layoutX="20.0" layoutY="562.0" prefHeight="32.0" prefWidth="196.0" text="199.995ISK/1.481USD/1.429EUR" />
+            <Label layoutX="303.0" layoutY="562.0" prefHeight="32.0" prefWidth="196.0" text="189.900ISK/1.407USD/1.356EUR" />
             </children>
         </Pane>
     </content>

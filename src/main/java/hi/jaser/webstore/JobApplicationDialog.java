@@ -12,8 +12,10 @@ public class JobApplicationDialog extends Dialog<Vidskiptavinur> {
 
     @FXML
     private TextField fxName;
- @FXML
- private TextField fxAddress;
+    @FXML
+    private TextField fxAddress;
+    @FXML
+    private TextField fxCV;
     @FXML
     private ButtonType fxILagi;
     @FXML
@@ -48,7 +50,7 @@ public class JobApplicationDialog extends Dialog<Vidskiptavinur> {
      */
     private void iLagiRegla() {
         Node iLagi = getDialogPane().lookupButton(fxILagi);
-        iLagi.disableProperty().bind(fxName.textProperty().isEmpty().or(fxAddress.textProperty().isEmpty()));
+        iLagi.disableProperty().bind(fxName.textProperty().isEmpty().or(fxAddress.textProperty().isEmpty()).or(fxCV.textProperty().isEmpty()));
     }
 
 }

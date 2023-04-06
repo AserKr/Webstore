@@ -12,13 +12,13 @@
             <children>
                 <Label layoutX="50.0" layoutY="73.0" prefHeight="35.0" prefWidth="124.0" text="Name (required):" />
                 <TextField fx:id="fxName" layoutX="188.0" layoutY="73.0" prefHeight="35.0" prefWidth="224.0" />
-                <Label layoutX="50.0" layoutY="115.0" prefHeight="35.0" prefWidth="124.0" text="Address:" />
+                <Label layoutX="50.0" layoutY="115.0" prefHeight="35.0" prefWidth="124.0" text="Email (required):" />
                 <TextField fx:id="fxAddress" layoutX="188.0" layoutY="115.0" prefHeight="35.0" prefWidth="224.0" />
                 <Label layoutX="50.0" layoutY="21.0" prefHeight="33.0" prefWidth="348.0" text="Please enter all required information:" />
-            <Label layoutX="50.0" layoutY="159.0" prefHeight="35.0" prefWidth="124.0" text="Email (required):" />
-            <TextField fx:id="fxAddress1" layoutX="188.0" layoutY="159.0" prefHeight="35.0" prefWidth="224.0" />
+            <Label layoutX="50.0" layoutY="159.0" prefHeight="35.0" prefWidth="124.0" text="Address:" />
+            <TextField layoutX="188.0" layoutY="159.0" prefHeight="35.0" prefWidth="224.0" />
             <Label layoutX="50.0" layoutY="201.0" prefHeight="33.0" prefWidth="124.0" text="CV (required):" wrapText="true" />
-            <TextField fx:id="fxAddress11" layoutX="188.0" layoutY="201.0" prefHeight="141.0" prefWidth="358.0" />
+            <TextField fx:id="fxCV" alignment="TOP_LEFT" layoutX="188.0" layoutY="201.0" prefHeight="141.0" prefWidth="358.0" />
             </children>
         </Pane>
     </content>
