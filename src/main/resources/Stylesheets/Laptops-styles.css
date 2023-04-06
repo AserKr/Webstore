@@ -2,3 +2,18 @@
 -fx-image: url("Laptop1.jpg");
 -fx-image-repeat: no-repeat;
 }
+
+#fxLaptop2 {
+-fx-image: url("Laptop2.jpg");
+-fx-image-repeat: no-repeat;
+}
+
+#fxLaptop3 {
+-fx-image: url("Laptop3.jpg");
+-fx-image-repeat: no-repeat;
+}
+
+#fxLaptop4 {
+-fx-image: url("Laptop4.jpg");
+-fx-image-repeat: no-repeat;
+}

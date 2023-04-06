@@ -2,3 +2,18 @@
 -fx-image: url("Tablet1.jpg");
 -fx-image-repeat: no-repeat;
 }
+
+#fxTablet2 {
+-fx-image: url("Tablet2.jpg");
+-fx-image-repeat: no-repeat;
+}
+
+#fxTablet3 {
+-fx-image: url("Tablet3.jpg");
+-fx-image-repeat: no-repeat;
+}
+
+#fxTablet4 {
+-fx-image: url("Tablet4.jpg");
+-fx-image-repeat: no-repeat;
+}

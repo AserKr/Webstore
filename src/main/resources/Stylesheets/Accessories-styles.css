@@ -2,3 +2,18 @@
 -fx-image: url("Accessory1.jpg");
 -fx-image-repeat: no-repeat;
 }
+
+#fxAccessory2 {
+-fx-image: url("Accessory2.jpg");
+-fx-image-repeat: no-repeat;
+}
+
+#fxAccessory3 {
+-fx-image: url("Accessory3.jpg");
+-fx-image-repeat: no-repeat;
+}
+
+#fxAccessory4 {
+-fx-image: url("Accessory4.jpg");
+-fx-image-repeat: no-repeat;
+}

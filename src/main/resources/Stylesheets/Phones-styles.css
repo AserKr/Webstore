@@ -2,3 +2,18 @@
 -fx-image: url("Phone1.jpg");
 -fx-image-repeat: no-repeat;
 }
+
+#fxPhone2 {
+-fx-image: url("Phone2.jpg");
+-fx-image-repeat: no-repeat;
+}
+
+#fxPhone3 {
+-fx-image: url("Phone3.jpg");
+-fx-image-repeat: no-repeat;
+}
+
+#fxPhone4 {
+-fx-image: url("Phone4.jpg");
+-fx-image-repeat: no-repeat;
+}

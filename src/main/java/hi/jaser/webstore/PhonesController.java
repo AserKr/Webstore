@@ -11,6 +11,14 @@ public class PhonesController {
     @FXML
     ImageView fxPhone1;
 
+    @FXML
+    ImageView fxPhone2;
+
+    @FXML
+    ImageView fxPhone3;
+
+    @FXML
+    ImageView fxPhone4;
 
     public void initialize() {
         pontunController = (PontunController) ViewSwitcher.lookup(View.PONTUN);
