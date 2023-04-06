@@ -68,12 +68,15 @@ public class GreidslaController {
             ;
 
         });
-
+        fxCurrencyBox.setValue(null);
  /*fxKarfa.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
         fxKarfa.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             // Indexinn í listanum.
             whichItemkarfa = fxKarfa.getSelectionModel().getSelectedIndex();
         });*/
+        fxCurrencyBox.valueProperty().addListener((observable, oldValue, newValue) -> {
+            pontunController.karfa.setCurrencyPrice(newValue.toString());
+        });
     }
 
     ;
@@ -127,9 +130,8 @@ public class GreidslaController {
     }
 
     public void currencyChange(ActionEvent actionEvent) {
-        String selectedCurrency = (String) fxCurrencyBox.getSelectionModel().getSelectedItem();
-        pontunController.karfa.setCurrency(selectedCurrency);
-        pontunController.getFxHeildarverd().textProperty().bind(pontunController.karfa.currencyProperty());
+
+pontunController.karfa.setCurrentCurrency(fxCurrencyBox.getSelectionModel().getSelectedItem().toString());
 
 
         }

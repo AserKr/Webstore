@@ -14,8 +14,6 @@
     <content>
         <Pane prefHeight="559.0" prefWidth="595.0" style="-fx-background-color: white;">
             <children>
-        <Button fx:id="fxSetjaKorfu" layoutX="424.0" layoutY="364.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="70.0" text="Add" />
-        <Button fx:id="fxTakaUrKorfu" layoutX="494.0" layoutY="364.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="70.0" text="Remove" />
         <Button fx:id="fxgreida" layoutX="459.0" layoutY="404.0" mnemonicParsing="false" onAction="#fxgreidaHandler" prefHeight="33.0" prefWidth="70.0" text="Pay" />
         <Label fx:id="fxHeildarverd" alignment="CENTER" contentDisplay="RIGHT" layoutX="394.0" layoutY="325.0" prefHeight="48.0" prefWidth="199.0" />
         <ImageView fx:id="fxLogo" fitHeight="266.0" fitWidth="539.0" layoutX="131.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true" styleClass="Phones-styles.css" />

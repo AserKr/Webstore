@@ -64,6 +64,9 @@ Matsedill menu;
         label2.setText("Contact us: \n \n Phone number: 555-1234 \n Email: info@jaser.com");
         label3.setText("Job");
         password = new Password(new SimpleStringProperty(null));
+        karfa.setHeildarverd(0);
+        karfa.setCurrencyPrice("ISK");
+        karfa.setCurrentCurrency("ISK");
         fxHeildarverd.setText("Total Price: 0");
         karfa.getObs().addListener((ListChangeListener<? super Veitingar>) change -> {
             System.out.println("Breyting");
@@ -72,20 +75,12 @@ Matsedill menu;
                 heild = heild + karfa.getVerd(i);
             }
             karfa.setHeildarverd(heild);
-            fxHeildarverd.setText("Total Price: " + String.valueOf(heild)+ karfa.getCurrency());
-        });
+            karfa.setCurrencyPrice(karfa.getCurrentCurrency());
+            System.out.println(fxHeildarverd);
+            System.out.println(heild);;
 
-        /*menuItems.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-        menuItems.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-            // Indexinn í listanum.
-            whichItem = menuItems.getSelectionModel().getSelectedIndex();
-        });*/
-        /*fxKarfa.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-        fxKarfa.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-            // Indexinn í listanum.
-            whichItemkarfa = fxKarfa.getSelectionModel().getSelectedIndex();
         });
-        fxgreida.disableProperty().bind(karfa.isemptyProperty());*/
+   fxHeildarverd.textProperty().bind(karfa.currencyPriceProperty());
     }
 
 
