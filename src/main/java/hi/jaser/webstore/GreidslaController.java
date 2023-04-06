@@ -32,10 +32,7 @@ public class GreidslaController {
     ObservableList<String> currencies = FXCollections.observableArrayList("USD", "ISK", "EUR");
     private StringProperty delivery = new SimpleStringProperty();
 
-    private static final String nameofStore = "Aser Trattoria";
-    private static final String message = "Your Order Has been confirmed!";
-    private static final String message1 = "Aser Trattoria appreciates your support!";
-    private static final String Okay = "Back";
+
 
     /**
      * creates the setup and bindings for the payment scene, binds the payment scene with variables from the main (PONTUN) scene
@@ -66,7 +63,6 @@ public class GreidslaController {
             System.out.println(fxKarfa.getItems().size());
             System.out.println(pontunController.karfa.getsize());
             ;
-
         });
         fxCurrencyBox.setValue(null);
  /*fxKarfa.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
@@ -99,14 +95,7 @@ public class GreidslaController {
         ViewSwitcher.switchTo(View.DELIVERYMETHOD);
     }
 
-    private Alert stofnaAlert(ButtonType bILagi) {
-        // Væri hægt að segja Alert.AlertType.CONFIRMATION en þá stjórnum við ekki útliti hnappanna
-        Alert a = new Alert(Alert.AlertType.NONE, message, bILagi);
-        a.setTitle(nameofStore);
-        a.setHeaderText(message1);
-        return a;
 
-    }
 
 
     @FXML
@@ -133,7 +122,5 @@ public class GreidslaController {
     public void currencyChange(ActionEvent actionEvent) {
 
 pontunController.karfa.setCurrentCurrency(fxCurrencyBox.getSelectionModel().getSelectedItem().toString());
-
-
-        }
+    }
     }

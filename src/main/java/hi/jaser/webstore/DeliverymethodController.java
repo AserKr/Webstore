@@ -52,4 +52,9 @@ public class DeliverymethodController {
         a.setHeaderText(message1);
         return a;
     }
+
+    public void fxHomeDeliveryHandler(ActionEvent actionEvent) {
+        HomeDeliveryDialog d = new HomeDeliveryDialog();
+        d.show();
+    }
 }

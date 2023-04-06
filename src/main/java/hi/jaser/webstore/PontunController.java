@@ -10,6 +10,8 @@ import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import vinnsla.*;
 
+import java.util.Date;
+
 public class PontunController {
     @FXML
     ListView fxKarfa;
@@ -42,6 +44,11 @@ public class PontunController {
 
     public Karfa karfa;
 
+
+
+
+    private DatePicker dateOfBirth;
+
     public ListView<Veitingar> getMenuItems() {
         return menuItems;
     }
@@ -55,6 +62,7 @@ Matsedill menu;
      */
     @FXML
     private void initialize() {
+        dateOfBirth=new DatePicker();
         user = new Vidskiptavinur(new SimpleStringProperty(null), new SimpleStringProperty(null));
         karfa = new Karfa(new SimpleIntegerProperty(0));
         menu = new Matsedill();
@@ -97,7 +105,13 @@ Matsedill menu;
 
 
     }
+    public DatePicker getDateOfBirth() {
+        return dateOfBirth;
+    }
 
+    public void setDateOfBirth(DatePicker dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
     @FXML
     private void fxJobHandler() {
             JobApplicationDialog d = new JobApplicationDialog();

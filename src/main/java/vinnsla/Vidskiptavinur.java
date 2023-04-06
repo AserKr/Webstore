@@ -11,6 +11,13 @@ public class Vidskiptavinur {
     private StringProperty Name = new SimpleStringProperty();
     private StringProperty Address= new SimpleStringProperty();
 
+    private StringProperty dateOfBirth = new SimpleStringProperty();
+    private StringProperty phoneNumber = new SimpleStringProperty();
+
+    private StringProperty CardNumber = new SimpleStringProperty();
+
+    private StringProperty cvc = new SimpleStringProperty();
+
     /**
      * a constructor for the user.
      * @param name name of the user

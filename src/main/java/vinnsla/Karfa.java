@@ -8,8 +8,6 @@ public class Karfa extends Matsedill {
     private StringProperty currencyPrice = new SimpleStringProperty();
 
 
-
-
     private String currentCurrency;
 
     private IntegerProperty heildarverd;
@@ -59,7 +57,7 @@ public class Karfa extends Matsedill {
     }
 
     public void setCurrencyPrice(String currency) {
-        int total=0;
+        int total = 0;
         switch (currency) {
             case "EUR":
                 total = getHeildarverd() / 140;
@@ -71,8 +69,9 @@ public class Karfa extends Matsedill {
                 total = getHeildarverd();
                 break;
         }
-        this.currencyPrice.set("Total Price: " + total + " "+currency);
+        this.currencyPrice.set("Total Price: " + total + " " + currency);
     }
+
     public String getCurrentCurrency() {
         return currentCurrency;
     }
@@ -80,17 +79,9 @@ public class Karfa extends Matsedill {
     public void setCurrentCurrency(String currentCurrency) {
         this.currentCurrency = currentCurrency;
     }
-}
-/*
-  switch (currency){
-          case "EUR":
-          this.heildarverd.set(heildarverd/145);;
-          break;
-          case "USD":
-          this.heildarverd.set(heildarverd/135);;
-          break;
-          case "ISK":
-          this.heildarverd.set(heildarverd);;
-          break;
 
-          }*/
+
+
+    }
+
+

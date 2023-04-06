@@ -13,7 +13,8 @@ public class VidskiptavinurDialog  extends Dialog<Vidskiptavinur> {
      TextField fxName;
     @FXML
      TextField fxAddress;
-
+    @FXML
+     DatePicker fxLoginBirth;
     @FXML
      ButtonType fxILagi;
 
@@ -37,9 +38,11 @@ public class VidskiptavinurDialog  extends Dialog<Vidskiptavinur> {
                 System.out.println(user.getName());
                 pontunController.getUser().nameProperty().bind(user.nameProperty());
                 pontunController.getUser().addressProperty().bind(user.addressProperty());
+                pontunController.getDateOfBirth().valueProperty().bind(fxLoginBirth.valueProperty());
                 pontunController.fxInnskraning.setText("Click here to enter your password");
                 PasswordDialog d = new PasswordDialog();
                 d.show();
+
                 return user;
             } else {
                 return null;

@@ -8,6 +8,7 @@ public enum View {
     TABLETS("tablets-view.fxml"),
     LAPTOPS("laptops-view.fxml"),
     ACCESSORIES("accessories-view.fxml"),
+    HOMEDELIVERY("homedelivery-view.fxml"),
 
     JOB("job-view.fxml"),
 

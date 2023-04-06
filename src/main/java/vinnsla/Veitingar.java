@@ -6,6 +6,9 @@ import javafx.beans.property.StringProperty;
 public class Veitingar {
 
     private StringProperty nafn = new SimpleStringProperty();
+
+
+
     private StringProperty verd = new SimpleStringProperty();
 
 
@@ -22,7 +25,9 @@ public class Veitingar {
     public String getVerd() {
         return verd.get();
     }
-
+    public void setVerd(String verd) {
+        this.verd.set(verd);
+    }
     @Override
     public String toString() {
         return  nafn.getValue() + ", " + verd.getValue();

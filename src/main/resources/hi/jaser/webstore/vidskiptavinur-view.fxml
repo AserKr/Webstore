@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.ButtonType?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.DialogPane?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
@@ -10,11 +11,13 @@
    <content>
       <Pane prefHeight="357.0" prefWidth="600.0">
          <children>
-            <Label layoutX="100.0" layoutY="150.0" prefHeight="48.0" prefWidth="124.0" text="Name:" />
-            <TextField fx:id="fxName" layoutX="224.0" layoutY="150.0" prefHeight="48.0" prefWidth="224.0" />
-            <Label layoutX="100.0" layoutY="207.0" prefHeight="48.0" prefWidth="124.0" text="Address:" />
-            <TextField fx:id="fxAddress" layoutX="224.0" layoutY="207.0" prefHeight="48.0" prefWidth="224.0" />
-            <Label layoutX="100.0" layoutY="101.0" prefHeight="33.0" prefWidth="348.0" text="Please enter your name and address below:" />
+            <Label layoutX="100.0" layoutY="102.0" prefHeight="48.0" prefWidth="124.0" text="Name:" />
+            <TextField fx:id="fxName" layoutX="224.0" layoutY="102.0" prefHeight="48.0" prefWidth="224.0" />
+            <Label layoutX="100.0" layoutY="167.0" prefHeight="48.0" prefWidth="124.0" text="Address:" />
+            <TextField fx:id="fxAddress" layoutX="224.0" layoutY="167.0" prefHeight="48.0" prefWidth="224.0" />
+            <Label layoutX="100.0" layoutY="56.0" prefHeight="33.0" prefWidth="348.0" text="Please enter your name, address and date of birth below:" />
+            <DatePicker fx:id="fxLoginBirth" layoutX="249.0" layoutY="241.0" />
+            <Label layoutX="100.0" layoutY="230.0" prefHeight="48.0" prefWidth="124.0" text="Date of Birth:" />
          </children>
       </Pane>
    </content>
