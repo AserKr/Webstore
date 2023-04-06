@@ -6,10 +6,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.ListChangeListener;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-import javafx.scene.control.SelectionMode;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import vinnsla.*;
 
@@ -38,6 +35,9 @@ public class PontunController {
     Label label3;
 
     @FXML
+    Hyperlink hyperlink;
+
+    @FXML
     ImageView fxLogo;
 
     public Karfa karfa;
@@ -62,7 +62,7 @@ Matsedill menu;
 
         label1.setText("Opening hours: \n \n Mondays-Thursdays: 8:00-16:00 \n Fridays: 8:00-15:00 \n Saturdays: 11:00-14:00 \n Sundays: CLOSED ");
         label2.setText("Contact us: \n \n Phone number: 555-1234 \n Email: info@jaser.com");
-        label3.setText("Job");
+        label3.setText("Do you want to work with us?");
         password = new Password(new SimpleStringProperty(null));
         karfa.setHeildarverd(0);
         karfa.setCurrencyPrice("ISK");
@@ -96,6 +96,12 @@ Matsedill menu;
         }
 
 
+    }
+
+    @FXML
+    private void fxJobHandler() {
+            JobApplicationDialog d = new JobApplicationDialog();
+            d.show();
     }
 
 

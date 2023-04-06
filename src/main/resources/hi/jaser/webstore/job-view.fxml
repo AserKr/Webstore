@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ButtonType?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<DialogPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+    <content>
+        <Pane prefHeight="357.0" prefWidth="600.0">
+            <children>
+                <Label layoutX="50.0" layoutY="73.0" prefHeight="35.0" prefWidth="124.0" text="Name (required):" />
+                <TextField fx:id="fxName" layoutX="188.0" layoutY="73.0" prefHeight="35.0" prefWidth="224.0" />
+                <Label layoutX="50.0" layoutY="115.0" prefHeight="35.0" prefWidth="124.0" text="Address:" />
+                <TextField fx:id="fxAddress" layoutX="188.0" layoutY="115.0" prefHeight="35.0" prefWidth="224.0" />
+                <Label layoutX="50.0" layoutY="21.0" prefHeight="33.0" prefWidth="348.0" text="Please enter all required information:" />
+            <Label layoutX="50.0" layoutY="159.0" prefHeight="35.0" prefWidth="124.0" text="Email (required):" />
+            <TextField fx:id="fxAddress1" layoutX="188.0" layoutY="159.0" prefHeight="35.0" prefWidth="224.0" />
+            <Label layoutX="50.0" layoutY="201.0" prefHeight="33.0" prefWidth="124.0" text="CV (required):" wrapText="true" />
+            <TextField fx:id="fxAddress11" layoutX="188.0" layoutY="201.0" prefHeight="141.0" prefWidth="358.0" />
+            </children>
+        </Pane>
+    </content>
+    <ButtonType fx:id="fxILagi" buttonData="OK_DONE" text="Okay" />
+    <ButtonType fx:id="fxHaettaVid" buttonData="CANCEL_CLOSE" text="Cancel" />
+</DialogPane>

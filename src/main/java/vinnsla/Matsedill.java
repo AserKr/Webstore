@@ -29,8 +29,8 @@ public class Matsedill {
      * a method to set the menu items;
      */
     public void setjaGogn(){
-        veitingar.add(new Veitingar(new SimpleStringProperty("iPhone 3G"), new SimpleStringProperty("119995")));
-        veitingar.add(new Veitingar(new SimpleStringProperty("Samsung Galaxy 4"), new SimpleStringProperty("109995")));
+        veitingar.add(new Veitingar(new SimpleStringProperty("iPhone 14 Pro Max"), new SimpleStringProperty("119995")));
+        veitingar.add(new Veitingar(new SimpleStringProperty("Samsung Galaxy S22"), new SimpleStringProperty("109995")));
         veitingar.add(new Veitingar(new SimpleStringProperty("Google Pixel 6"), new SimpleStringProperty("99990")));
         veitingar.add(new Veitingar(new SimpleStringProperty("Sony Xperia IV"), new SimpleStringProperty("89990")));
         veitingar.add(new Veitingar(new SimpleStringProperty("iPad Air"), new SimpleStringProperty("89995")));

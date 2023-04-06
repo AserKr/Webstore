@@ -7,37 +7,37 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="600.0" stylesheets="@../../../Stylesheets/Phones-styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.jaser.webstore.PhonesController">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="615.0" stylesheets="@../../../Stylesheets/Phones-styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.jaser.webstore.PhonesController">
    <content>
-      <Pane prefHeight="549.0" prefWidth="595.0" style="-fx-background-color: white;">
+      <Pane prefHeight="613.0" prefWidth="595.0" style="-fx-background-color: white;">
          <children>
             <Button fx:id="fxBack" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#fxTilBakaHandler" text="Back" />
-            <Button fx:id="fxBuy" layoutX="129.0" layoutY="249.0" mnemonicParsing="false" onAction="#fxBuyPhone" styleClass="button1" stylesheets="@../../../Stylesheets/Button-Style.css" text="Buy" />
+            <Button fx:id="fxBuy" layoutX="129.0" layoutY="289.0" mnemonicParsing="false" onAction="#fxBuyPhone" styleClass="button1" stylesheets="@../../../Stylesheets/Button-Style.css" text="Buy" />
             <ImageView fx:id="fxPhone1" fitHeight="150.0" fitWidth="142.0" layoutX="27.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true" styleClass="Phones-styles.css" />
             <Button fx:id="fxKarfa" layoutX="475.0" layoutY="27.0" mnemonicParsing="false" onAction="#fxgreidaHandler" prefHeight="39.0" prefWidth="73.0" text="Karfa" />
-            <Label alignment="TOP_LEFT" layoutX="117.0" layoutY="138.0" prefHeight="98.0" prefWidth="152.0" text="Amazing phone" />
-            <Label layoutX="36.0" layoutY="105.0" prefHeight="27.0" prefWidth="126.0" text="Phone 1">
+            <Label fx:id="fxDescription1" alignment="TOP_LEFT" layoutX="117.0" layoutY="138.0" prefHeight="137.0" prefWidth="158.0" wrapText="true" />
+            <Label layoutX="36.0" layoutY="105.0" prefHeight="27.0" prefWidth="183.0" text="iPhone 14 Pro Max">
                <font>
                   <Font size="18.0" />
                </font></Label>
-            <Label layoutX="277.0" layoutY="105.0" prefHeight="27.0" prefWidth="126.0" text="Phone 2">
+            <Label layoutX="277.0" layoutY="105.0" prefHeight="27.0" prefWidth="191.0" text="Samsung Galaxy S22">
                <font>
                   <Font size="18.0" />
                </font></Label>
             <ImageView fx:id="fxPhone2" fitHeight="150.0" fitWidth="142.0" layoutX="269.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true" styleClass="Phones-styles.css" />
-            <Label alignment="TOP_LEFT" layoutX="411.0" layoutY="138.0" prefHeight="98.0" prefWidth="152.0" text="Also amazing phone" />
-            <Button fx:id="fxBuy2" layoutX="418.0" layoutY="249.0" mnemonicParsing="false" onAction="#fxBuyPhone2" styleClass="button1" stylesheets="@../../../Stylesheets/Button-Style.css" text="Buy" />
-            <Button fx:id="fxBuy3" layoutX="129.0" layoutY="496.0" mnemonicParsing="false" onAction="#fxBuyPhone3" styleClass="button1" stylesheets="@../../../Stylesheets/Button-Style.css" text="Buy" />
-            <ImageView fx:id="fxPhone3" fitHeight="150.0" fitWidth="142.0" layoutX="-13.0" layoutY="385.0" pickOnBounds="true" preserveRatio="true" styleClass="Phones-styles.css" />
-            <Label layoutX="126.0" layoutY="385.0" prefHeight="98.0" prefWidth="152.0" text="Label" />
-            <Label layoutX="36.0" layoutY="352.0" prefHeight="27.0" prefWidth="126.0" text="Phone 3">
+            <Label fx:id="fxDescription2" alignment="TOP_LEFT" layoutX="411.0" layoutY="139.0" prefHeight="146.0" prefWidth="175.0" wrapText="true" />
+            <Button fx:id="fxBuy2" layoutX="418.0" layoutY="289.0" mnemonicParsing="false" onAction="#fxBuyPhone2" styleClass="button1" stylesheets="@../../../Stylesheets/Button-Style.css" text="Buy" />
+            <Button fx:id="fxBuy3" layoutX="129.0" layoutY="542.0" mnemonicParsing="false" onAction="#fxBuyPhone3" styleClass="button1" stylesheets="@../../../Stylesheets/Button-Style.css" text="Buy" />
+            <ImageView fx:id="fxPhone3" fitHeight="150.0" fitWidth="142.0" layoutX="-13.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true" styleClass="Phones-styles.css" />
+            <Label fx:id="fxDescription3" alignment="TOP_LEFT" layoutX="120.0" layoutY="400.0" prefHeight="132.0" prefWidth="152.0" wrapText="true" />
+            <Label layoutX="36.0" layoutY="366.0" prefHeight="27.0" prefWidth="126.0" text="Google Pixel 6">
                <font>
                   <Font size="18.0" />
                </font></Label>
-            <Button fx:id="fxBuy4" layoutX="418.0" layoutY="496.0" mnemonicParsing="false" onAction="#fxBuyPhone4" styleClass="button1" stylesheets="@../../../Stylesheets/Button-Style.css" text="Buy" />
-            <ImageView fx:id="fxPhone4" fitHeight="150.0" fitWidth="142.0" layoutX="269.0" layoutY="385.0" pickOnBounds="true" preserveRatio="true" styleClass="Phones-styles.css" />
-            <Label layoutX="411.0" layoutY="391.0" prefHeight="98.0" prefWidth="152.0" text="Label" />
-            <Label layoutX="299.0" layoutY="352.0" prefHeight="27.0" prefWidth="126.0" text="Phone 4">
+            <Button fx:id="fxBuy4" layoutX="418.0" layoutY="542.0" mnemonicParsing="false" onAction="#fxBuyPhone4" styleClass="button1" stylesheets="@../../../Stylesheets/Button-Style.css" text="Buy" />
+            <ImageView fx:id="fxPhone4" fitHeight="150.0" fitWidth="142.0" layoutX="269.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true" styleClass="Phones-styles.css" />
+            <Label fx:id="fxDescription4" alignment="TOP_LEFT" layoutX="399.0" layoutY="400.0" prefHeight="136.0" prefWidth="169.0" wrapText="true" />
+            <Label layoutX="298.0" layoutY="366.0" prefHeight="27.0" prefWidth="126.0" text="Sony Xperia IV">
                <font>
                   <Font size="18.0" />
                </font></Label>
