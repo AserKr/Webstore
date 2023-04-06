@@ -91,9 +91,9 @@ public class GreidslaController {
     @FXML
 
     private void fxStadfestingHandler(ActionEvent e) {
-        pontunController.fxgreida.disableProperty().bind(pontunController.karfa.isemptyProperty());
+        /*pontunController.fxgreida.disableProperty().bind(pontunController.karfa.isemptyProperty());
         ButtonType bType = new ButtonType(Okay,
-                ButtonBar.ButtonData.OK_DONE);
+                ButtonBar.ButtonData.OK_DONE);*/
         /*Alert a = stofnaAlert(bType);
         a.showAndWait();*/
         ViewSwitcher.switchTo(View.DELIVERYMETHOD);
