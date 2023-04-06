@@ -14,7 +14,7 @@
                 <Button fx:id="fxBack" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#fxTilBakaHandler" text="Back" />
                 <Button fx:id="fxBuy" layoutX="129.0" layoutY="249.0" mnemonicParsing="false" onAction="#fxBuyTablet" styleClass="button1" stylesheets="@../../../Stylesheets/Button-Style.css" text="Buy" />
                 <ImageView fx:id="fxTablet1" fitHeight="150.0" fitWidth="142.0" layoutX="14.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true" styleClass="Phones-styles.css" />
-                <Button layoutX="475.0" layoutY="27.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="73.0" text="Karfa" />
+                <Button fx:id="fxKarfa" layoutX="475.0" layoutY="27.0" mnemonicParsing="false" onAction="#fxgreidaHandler" prefHeight="39.0" prefWidth="73.0" text="Karfa" />
                 <Label alignment="TOP_LEFT" layoutX="126.0" layoutY="138.0" prefHeight="98.0" prefWidth="141.0" text="Amazing laptop" />
                 <Label layoutX="22.0" layoutY="105.0" prefHeight="27.0" prefWidth="126.0" text="Tablet 1">
                     <font>

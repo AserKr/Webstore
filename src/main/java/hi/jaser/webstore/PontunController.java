@@ -10,6 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
+import javafx.scene.image.ImageView;
 import vinnsla.*;
 
 public class PontunController {
@@ -27,6 +28,17 @@ public class PontunController {
     Button fxInnskraning;
     private int whichItem = 0;
 
+    @FXML
+    Label label1;
+
+    @FXML
+    Label label2;
+
+    @FXML
+    Label label3;
+
+    @FXML
+    ImageView fxLogo;
 
     public Karfa karfa;
 
@@ -48,6 +60,9 @@ Matsedill menu;
         menu = new Matsedill();
         menu.setjaGogn();
 
+        label1.setText("Opening hours: \n \n Mondays-Thursdays: 8:00-16:00 \n Fridays: 8:00-15:00 \n Saturdays: 11:00-14:00 \n Sundays: CLOSED ");
+        label2.setText("Contact us: \n \n Phone number: 555-1234 \n Email: info@jaser.com");
+        label3.setText("Job");
         password = new Password(new SimpleStringProperty(null));
         fxHeildarverd.setText("Total Price: 0");
         karfa.getObs().addListener((ListChangeListener<? super Veitingar>) change -> {
@@ -59,6 +74,7 @@ Matsedill menu;
             karfa.setHeildarverd(heild);
             fxHeildarverd.setText("Total Price: " + String.valueOf(heild)+ karfa.getCurrency());
         });
+
         /*menuItems.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
         menuItems.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             // Indexinn í listanum.

@@ -17,3 +17,8 @@
 -fx-image: url("Phone4.jpg");
 -fx-image-repeat: no-repeat;
 }
+
+#fxLogo {
+-fx-image: url("Logo.jpg");
+-fx-image-repeat: no-repeat;
+}

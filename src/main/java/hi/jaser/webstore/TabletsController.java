@@ -2,6 +2,7 @@ package hi.jaser.webstore;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 
 public class TabletsController {
@@ -9,6 +10,9 @@ public class TabletsController {
     PontunController pontunController;
     @FXML
     ImageView fxTablet1;
+
+    @FXML
+    Button fxKarfa;
 
     public void initialize() {
         pontunController = (PontunController) ViewSwitcher.lookup(View.PONTUN);
@@ -35,5 +39,10 @@ public class TabletsController {
     @FXML
     private void fxBuyTablet4(ActionEvent e) {
         pontunController.karfa.getObs().add(pontunController.menu.getObs().get(7));
+    }
+
+    @FXML
+    private void fxgreidaHandler() {
+        ViewSwitcher.switchTo(View.GREIDSLA);
     }
 }
