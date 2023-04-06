@@ -17,7 +17,7 @@
             <Font size="16.0" />
          </font>
       </Button>
-      <Button layoutX="360.0" layoutY="200.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="161.0" text="Pick-up">
+      <Button fx:id="fxPickUp" layoutX="349.0" layoutY="200.0" mnemonicParsing="false" onAction="#fxPickUpHandler" prefHeight="55.0" prefWidth="161.0" text="Pick-up">
          <font>
             <Font size="16.0" />
          </font>
