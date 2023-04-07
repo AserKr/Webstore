@@ -54,6 +54,9 @@ private BooleanProperty isEmptyCVC = new SimpleBooleanProperty(true);
                 if (newText.length() == 3) {
                     isEmptyCVC.set(false);
                 }
+                else if (newText.length() < 3) {
+                    isEmptyCard.set(true);
+                }
                 return change;
             }
             return null;
@@ -67,6 +70,9 @@ private BooleanProperty isEmptyCVC = new SimpleBooleanProperty(true);
             if (newText.matches("\\d{0,16}")) {
                 if (newText.length() == 16) {
                     isEmptyCard.set(false);
+                }
+                else if (newText.length() < 16) {
+                    isEmptyCard.set(true);
                 }
                 return change;
             }
@@ -85,8 +91,6 @@ private BooleanProperty isEmptyCVC = new SimpleBooleanProperty(true);
             }
             return null;
     });
-
-
         }
 
     /**
