@@ -4,11 +4,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.control.*;
-import vinnsla.Vidskiptavinur;
+import vinnsla.Customer;
 
 import java.io.IOException;
 
-public class VidskiptavinurDialog  extends Dialog<Vidskiptavinur> {
+public class CustomerDialog extends Dialog<Customer> {
     @FXML
      TextField fxName;
     @FXML
@@ -18,21 +18,21 @@ public class VidskiptavinurDialog  extends Dialog<Vidskiptavinur> {
     @FXML
      ButtonType fxILagi;
 
-    public Vidskiptavinur getUser() {
+    public Customer getUser() {
         return user;
     }
 
-    private Vidskiptavinur user;
+    private Customer user;
     private PontunController pontunController;
 
     /**
      * creates the dialog for the sign in information in which the user can enter their name and address, and sets up needed bindings.
      */
-    public VidskiptavinurDialog() {
+    public CustomerDialog() {
         setDialogPane(readLoginDialog());
         iLagiRegla();
         pontunController = (PontunController) ViewSwitcher.lookup(View.PONTUN);
-        user = new Vidskiptavinur(fxName.textProperty(), fxAddress.textProperty());
+        user = new Customer(fxName.textProperty(), fxAddress.textProperty());
         setResultConverter(b -> {
             if (b.getButtonData() == ButtonBar.ButtonData.OK_DONE) {
                 System.out.println(user.getName());

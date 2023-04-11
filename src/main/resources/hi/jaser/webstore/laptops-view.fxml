@@ -11,10 +11,10 @@
     <content>
         <Pane prefHeight="613.0" prefWidth="595.0" style="-fx-background-color: white;">
             <children>
-                <Button fx:id="fxBack" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#fxTilBakaHandler" text="Back" />
+                <Button fx:id="fxBack" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#fxGoBackHandler" text="Back" />
                 <Button fx:id="fxBuy" layoutX="227.0" layoutY="276.0" mnemonicParsing="false" onAction="#fxBuyLaptop" styleClass="button1" stylesheets="@../../../Stylesheets/Button-Style.css" text="Buy" />
                 <ImageView fx:id="fxLaptop1" fitHeight="150.0" fitWidth="142.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true" styleClass="Phones-styles.css" />
-                <Button fx:id="fxKarfa" layoutX="475.0" layoutY="27.0" mnemonicParsing="false" onAction="#fxgreidaHandler" prefHeight="39.0" prefWidth="73.0" text="Karfa" />
+                <Button fx:id="fxKarfa" layoutX="475.0" layoutY="27.0" mnemonicParsing="false" onAction="#fxCartHandler" prefHeight="39.0" prefWidth="73.0" text="Karfa" />
                 <Label fx:id="fxDescription1" alignment="TOP_LEFT" layoutX="129.0" layoutY="138.0" prefHeight="126.0" prefWidth="149.0" wrapText="true" />
                 <Label layoutX="30.0" layoutY="105.0" prefHeight="27.0" prefWidth="126.0" text="MacBook Pro">
                     <font>

@@ -3,9 +3,7 @@ package vinnsla;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class Vidskiptavinur {
-
-
+public class Customer {
 
 
     private StringProperty Name = new SimpleStringProperty();
@@ -23,7 +21,7 @@ public class Vidskiptavinur {
      * @param name name of the user
      * @param address address of the user
      */
-    public Vidskiptavinur(StringProperty name, StringProperty address) {
+    public Customer(StringProperty name, StringProperty address) {
         Name = name;
         Address = address;
     }

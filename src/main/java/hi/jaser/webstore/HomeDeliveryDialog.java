@@ -6,13 +6,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.control.*;
-import vinnsla.Vidskiptavinur;
+import vinnsla.Customer;
 
 import java.io.IOException;
-import java.util.Date;
 import java.util.function.UnaryOperator;
 
-public class HomeDeliveryDialog extends Dialog<Vidskiptavinur>{
+public class HomeDeliveryDialog extends Dialog<Customer>{
     @FXML
     TextField fxName;
     @FXML
@@ -27,18 +26,19 @@ public class HomeDeliveryDialog extends Dialog<Vidskiptavinur>{
     ButtonType fxILagi;
     @FXML
     TextField fxCVC;
-    public Vidskiptavinur getUser() {
+    public Customer getUser() {
         return user;
     }
 private BooleanProperty isEmptyCVC = new SimpleBooleanProperty(true);
     private BooleanProperty isEmptyCard = new SimpleBooleanProperty(true);
 
-    private Vidskiptavinur user;
+    private Customer user;
     private PontunController pontunController;
     private static final String nameofStore = "Jaser Electronics";
     private static final String message1 = "Your Order Has been confirmed for delivery!";
     private static final String message = "Your order will be delivered in 7-10 business days to ";
     private static final String Okay = "Back to home page";
+
     public HomeDeliveryDialog() {
         setDialogPane(readDialog());
        pontunController= (PontunController) ViewSwitcher.lookup(View.PONTUN);

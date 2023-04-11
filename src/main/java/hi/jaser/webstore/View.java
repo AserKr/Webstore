@@ -12,7 +12,7 @@ public enum View {
 
     JOB("job-view.fxml"),
 
-    GREIDSLA("greidsla-view.fxml"),
+    CART("greidsla-view.fxml"),
 
     DELIVERYMETHOD("deliverymethod-view.fxml");
 

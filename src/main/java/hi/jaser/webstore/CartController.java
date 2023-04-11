@@ -8,24 +8,24 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import vinnsla.Veitingar;
-import vinnsla.Vidskiptavinur;
+import vinnsla.Products;
+import vinnsla.Customer;
 
-public class GreidslaController {
+public class CartController {
     @FXML
     Label fxDelivery;
     @FXML
-    Button fxTilbaka;
+    Button fxGoBack;
     @FXML
     ListView fxKarfa;
     @FXML
-    Label totalprice;
+    Label totalPrice;
     @FXML
-    Button fxremove;
+    Button fxRemove;
 
 
     private PontunController pontunController;
-    private Vidskiptavinur user;
+    private Customer user;
     private int whichItemkarfa = 0;
     @FXML
     ComboBox fxCurrencyBox;
@@ -35,14 +35,13 @@ public class GreidslaController {
 
 
     /**
-     * creates the setup and bindings for the payment scene, binds the payment scene with variables from the main (PONTUN) scene
+     * Creates the setup and bindings for the payment scene, binds the payment scene with variables from the main (PONTUN) scene
      */
     @FXML
     private void initialize() {
-
-        user = new Vidskiptavinur(new SimpleStringProperty(null), new SimpleStringProperty(null));
+        user = new Customer(new SimpleStringProperty(null), new SimpleStringProperty(null));
         pontunController = (PontunController) ViewSwitcher.lookup(View.PONTUN);
-        totalprice.textProperty().bind(pontunController.getFxHeildarverd().textProperty());
+        totalPrice.textProperty().bind(pontunController.getFxTotalPrice().textProperty());
         setDelivery("Your order will be delivered after 15 minutes");
         user.nameProperty().addListener((observable, oldValue, newValue) -> {
             setDelivery("Your order will be delivered after 15 minutes to " + user.getName() + " at " + user.getAddress());
@@ -57,7 +56,7 @@ public class GreidslaController {
         for (int i = 0; i < pontunController.karfa.getsize(); i++) {
             fxKarfa.getItems().add(pontunController.karfa.getObs().get(i));
         }
-        pontunController.karfa.getObs().addListener((ListChangeListener<? super Veitingar>) change -> {
+        pontunController.karfa.getObs().addListener((ListChangeListener<? super Products>) change -> {
             /*   fxKarfa.getItems().add(pontunController.karfa.getObs().get(pontunController.karfa.getsize()-1));*/
             fxKarfa.setItems(pontunController.karfa.getObs());
             System.out.println(fxKarfa.getItems().size());
@@ -75,17 +74,21 @@ public class GreidslaController {
         });
     }
 
-    ;
 
-
+    /**
+     * Handler to go back to the main page
+     * @param e
+     */
     @FXML
-
-    private void fxTilBakaHandler(ActionEvent e) {
+    private void fxGoBackHandler(ActionEvent e) {
         ViewSwitcher.switchTo(View.PONTUN);
     }
 
+    /**
+     * Handler to confirm order. Takes the user to the "Choose delivery method" page
+     * @param e
+     */
     @FXML
-
     private void fxStadfestingHandler(ActionEvent e) {
         /*pontunController.fxgreida.disableProperty().bind(pontunController.karfa.isemptyProperty());
         ButtonType bType = new ButtonType(Okay,
@@ -96,20 +99,18 @@ public class GreidslaController {
     }
 
 
-
-
+    /**
+     * Handler to remove items from the cart
+     * @param e
+     */
     @FXML
-
     private void fxremovefromcart(ActionEvent e) {
         if (fxKarfa.getSelectionModel().getSelectedItems().size() > 0) {
             int index = fxKarfa.getSelectionModel().getSelectedIndex();
             pontunController.karfa.deleteitem(index);
             fxKarfa.setItems(pontunController.karfa.getObs());
-
         }
-
     }
-
 
     public StringProperty deliveryProperty() {
         return delivery;
@@ -119,8 +120,11 @@ public class GreidslaController {
         this.delivery.set(delivery);
     }
 
+    /**
+     * Handler that changes the currency of the total price of the cart to the currency that is chosen
+     * @param actionEvent
+     */
     public void currencyChange(ActionEvent actionEvent) {
-
-pontunController.karfa.setCurrentCurrency(fxCurrencyBox.getSelectionModel().getSelectedItem().toString());
+        pontunController.karfa.setCurrentCurrency(fxCurrencyBox.getSelectionModel().getSelectedItem().toString());
     }
-    }
+}

@@ -10,21 +10,22 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
 <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="449.0" prefWidth="615.0" stylesheets="@../../../Stylesheets/Phones-styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.jaser.webstore.PontunController">
     <content>
         <Pane prefHeight="559.0" prefWidth="595.0" style="-fx-background-color: white;">
             <children>
-        <Button fx:id="fxgreida" layoutX="459.0" layoutY="404.0" mnemonicParsing="false" onAction="#fxgreidaHandler" prefHeight="33.0" prefWidth="70.0" text="Pay" />
-        <Label fx:id="fxHeildarverd" alignment="CENTER" contentDisplay="RIGHT" layoutX="394.0" layoutY="325.0" prefHeight="48.0" prefWidth="199.0" />
-        <ImageView fx:id="fxLogo" fitHeight="266.0" fitWidth="539.0" layoutX="131.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true" styleClass="Phones-styles.css" />
+        <Button fx:id="fxgreida" layoutX="459.0" layoutY="404.0" mnemonicParsing="false" onAction="#fxCartHandler" prefHeight="33.0" prefWidth="70.0" text="Pay" />
+        <Label fx:id="fxTotalPrice" alignment="CENTER" contentDisplay="RIGHT" layoutX="394.0" layoutY="325.0" prefHeight="48.0" prefWidth="199.0" />
+        <ImageView fx:id="fxLogo" fitHeight="266.0" fitWidth="539.0" layoutX="131.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true" styleClass="Phones-styles.css" />
         <HBox prefHeight="42.0" prefWidth="600.0" styleClass="button1" stylesheets="@../../../Stylesheets/Button-Style.css">
             <children>
                 <Button fx:id="fxPhones" mnemonicParsing="false" onAction="#fxPhonesHandler" prefHeight="45.0" prefWidth="129.0" styleClass="button1" stylesheets="@../../../Stylesheets/Button-Style.css" text="Phones" />
                 <Button fx:id="fxTablets" mnemonicParsing="false" onAction="#fxTabletsHandler" prefHeight="45.0" prefWidth="129.0" styleClass="button1" stylesheets="@../../../Stylesheets/Button-Style.css" text="Tablets" />
                 <Button fx:id="fxLaptops" mnemonicParsing="false" onAction="#fxLaptopsHandler" prefHeight="45.0" prefWidth="129.0" styleClass="button1" stylesheets="@../../../Stylesheets/Button-Style.css" text="Laptops" />
                 <Button fx:id="fxAccessories" mnemonicParsing="false" onAction="#fxAccessoriesHandler" prefHeight="45.0" prefWidth="129.0" styleClass="button1" stylesheets="@../../../Stylesheets/Button-Style.css" text="Accessories" />
-                <Button fx:id="fxInnskraning" mnemonicParsing="false" onAction="#fxInnskraningHandler" prefHeight="45.0" prefWidth="129.0" styleClass="button1" stylesheets="@../../../Stylesheets/Button-Style.css" text="Sign in" />
+                <Button fx:id="fxInnskraning" mnemonicParsing="false" onAction="#fxSignInHandler" prefHeight="45.0" prefWidth="129.0" styleClass="button1" stylesheets="@../../../Stylesheets/Button-Style.css" text="Sign in" />
             </children>
         </HBox>
             <GridPane layoutY="454.0" prefHeight="98.0" prefWidth="600.0" style="-fx-background-color: aliceblue;">
@@ -43,6 +44,11 @@
                   <Hyperlink fx:id="hyperlink" onAction="#fxJobHandler" prefHeight="23.0" prefWidth="95.0" text="Apply here!" GridPane.columnIndex="2" />
                </children>
             </GridPane>
+            <Label alignment="CENTER" layoutX="247.0" layoutY="108.0" prefHeight="32.0" prefWidth="107.0" text="JASER" textAlignment="CENTER" textFill="#d33376">
+               <font>
+                  <Font name="Futura Medium" size="23.0" />
+               </font>
+            </Label>
 
 
     </children>

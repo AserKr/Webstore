@@ -1,14 +1,12 @@
 package hi.jaser.webstore;
-import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.control.*;
-import vinnsla.Vidskiptavinur;
+import vinnsla.Customer;
 import java.io.IOException;
-import java.util.Optional;
 
-public class JobApplicationDialog extends Dialog<Vidskiptavinur> {
+public class JobApplicationDialog extends Dialog<Customer> {
 
     @FXML
     private TextField fxName;
@@ -24,7 +22,7 @@ public class JobApplicationDialog extends Dialog<Vidskiptavinur> {
 
 
     /**
-     * Notendaviðmótið lesið inn og dialogurinn fær pane
+     * The user interface is read og the dialog gets a pane
      */
     public JobApplicationDialog() {
         setDialogPane(lesaJobApplicationDialog());
@@ -32,8 +30,8 @@ public class JobApplicationDialog extends Dialog<Vidskiptavinur> {
     }
 
     /**
-     * Útlit dialogsins búið til
-     * @return hlutur af DialogPane
+     * The look of the dialog is made
+     * @return object of DialogPane
      */
     private DialogPane lesaJobApplicationDialog () {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("job-view.fxml"));
@@ -46,11 +44,10 @@ public class JobApplicationDialog extends Dialog<Vidskiptavinur> {
     }
 
     /**
-     * Regla búin til um hvenær í lagi hnappurinn á að vera virkur/óvirkur
+     * Rule to bind the Okay button in the dialog to the text fields
      */
     private void iLagiRegla() {
         Node iLagi = getDialogPane().lookupButton(fxILagi);
         iLagi.disableProperty().bind(fxName.textProperty().isEmpty().or(fxAddress.textProperty().isEmpty()).or(fxCV.textProperty().isEmpty()));
     }
-
 }

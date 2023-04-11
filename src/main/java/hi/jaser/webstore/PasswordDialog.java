@@ -13,8 +13,8 @@ import java.io.IOException;
 public class PasswordDialog extends Dialog<Password> {
     @FXML
     TextField fxPass;
-private Password password;
-private PontunController pontunController;
+    private Password password;
+    private PontunController pontunController;
 
     /**
      * sets up the password dialog in which a user can enter their password.
@@ -27,15 +27,15 @@ private PontunController pontunController;
             if (b.getButtonData() == ButtonBar.ButtonData.OK_DONE) {
                 pontunController.getPassword().passwordProperty().bind(password.passwordProperty());
                 if (!password.getPassword().equals("")){
-                pontunController.fxInnskraning.disableProperty().set(true);
-                pontunController.fxInnskraning.setText("Welcome " + pontunController.getUser().getName());}
+                    pontunController.fxInnskraning.disableProperty().set(true);
+                    pontunController.fxInnskraning.setText("Welcome " + pontunController.getUser().getName());}
 
                 return password;
             } else {
                 return null;
             }
 
-    });
+        });
         setTitle("Password");
     }
 

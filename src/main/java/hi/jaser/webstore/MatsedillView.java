@@ -2,7 +2,7 @@ package hi.jaser.webstore;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.ListView;
-import vinnsla.Matsedill;
+import vinnsla.ProductList;
 
 import java.io.IOException;
 
@@ -17,9 +17,9 @@ public class MatsedillView extends ListView {
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
-        Matsedill local = new Matsedill();
-        local.setjaGogn();
-        setItems(local.getVeitingar());
+        ProductList local = new ProductList();
+        local.setjaItems();
+        setItems(local.getProducts());
     }
 
 

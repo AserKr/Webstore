@@ -2,7 +2,7 @@ package vinnsla;
 
 import javafx.beans.property.*;
 
-public class Karfa extends Matsedill {
+public class Karfa extends ProductList {
 
 
     private StringProperty currencyPrice = new SimpleStringProperty();
@@ -10,30 +10,30 @@ public class Karfa extends Matsedill {
 
     private String currentCurrency;
 
-    private IntegerProperty heildarverd;
+    private IntegerProperty totalPrice;
     private BooleanProperty isEmptyProp = new SimpleBooleanProperty();
 
 
     /**
-     * a constructor for the cart, the cart has one extra element than matsedill which is the total price of the elements inside it
+     * a constructor for the cart, the cart has one extra element than ProductList which is the total price of the elements inside it
      *
-     * @param heildarverd the total price of the elements in the cart.
+     * @param totalPrice the total price of the elements in the cart.
      */
-    public Karfa(IntegerProperty heildarverd) {
-        this.heildarverd = heildarverd;
+    public Karfa(IntegerProperty totalPrice) {
+        this.totalPrice = totalPrice;
     }
 
 
-    public int getHeildarverd() {
-        return heildarverd.get();
+    public int getTotalPrice() {
+        return totalPrice.get();
     }
 
-    public IntegerProperty heildarverdProperty() {
-        return heildarverd;
+    public IntegerProperty totalPriceProperty() {
+        return totalPrice;
     }
 
-    public void setHeildarverd(int heildarverd) {
-        this.heildarverd.set(heildarverd);
+    public void setTotalPrice(int totalPrice) {
+        this.totalPrice.set(totalPrice);
     }
 
 
@@ -60,13 +60,13 @@ public class Karfa extends Matsedill {
         int total = 0;
         switch (currency) {
             case "EUR":
-                total = getHeildarverd() / 140;
+                total = getTotalPrice() / 140;
                 break;
             case "USD":
-                total = getHeildarverd() / 135;
+                total = getTotalPrice() / 135;
                 break;
             case "ISK":
-                total = getHeildarverd();
+                total = getTotalPrice();
                 break;
         }
         this.currencyPrice.set("Total Price: " + total + " " + currency);
