@@ -48,10 +48,7 @@ public class CustomerDialog extends Dialog<Customer> {
                 return null;
             }
         });
-
         setTitle("Sign in Information");
-
-
     }
 
     /**

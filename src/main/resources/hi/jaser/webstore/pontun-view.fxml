@@ -17,8 +17,8 @@
         <Pane prefHeight="559.0" prefWidth="595.0" style="-fx-background-color: white;">
             <children>
         <Button fx:id="fxgreida" layoutX="459.0" layoutY="404.0" mnemonicParsing="false" onAction="#fxCartHandler" prefHeight="33.0" prefWidth="70.0" text="Pay" />
-        <Label fx:id="fxTotalPrice" alignment="CENTER" contentDisplay="RIGHT" layoutX="394.0" layoutY="325.0" prefHeight="48.0" prefWidth="199.0" />
-        <ImageView fx:id="fxLogo" fitHeight="266.0" fitWidth="539.0" layoutX="131.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true" styleClass="Phones-styles.css" />
+        <Label fx:id="fxTotalPrice" alignment="CENTER" contentDisplay="RIGHT" layoutX="395.0" layoutY="342.0" prefHeight="48.0" prefWidth="199.0" />
+        <ImageView fx:id="fxLogo" fitHeight="266.0" fitWidth="539.0" layoutX="131.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true" styleClass="Phones-styles.css" />
         <HBox prefHeight="42.0" prefWidth="600.0" styleClass="button1" stylesheets="@../../../Stylesheets/Button-Style.css">
             <children>
                 <Button fx:id="fxPhones" mnemonicParsing="false" onAction="#fxPhonesHandler" prefHeight="45.0" prefWidth="129.0" styleClass="button1" stylesheets="@../../../Stylesheets/Button-Style.css" text="Phones" />
@@ -44,7 +44,7 @@
                   <Hyperlink fx:id="hyperlink" onAction="#fxJobHandler" prefHeight="23.0" prefWidth="95.0" text="Apply here!" GridPane.columnIndex="2" />
                </children>
             </GridPane>
-            <Label alignment="CENTER" layoutX="247.0" layoutY="108.0" prefHeight="32.0" prefWidth="107.0" text="JASER" textAlignment="CENTER" textFill="#d33376">
+            <Label alignment="CENTER" layoutX="247.0" layoutY="105.0" prefHeight="32.0" prefWidth="107.0" text="JASER" textAlignment="CENTER" textFill="#d33376">
                <font>
                   <Font name="Futura Medium" size="23.0" />
                </font>

@@ -116,6 +116,10 @@ public class CartController {
         return delivery;
     }
 
+    /**
+     * Setter for the delivery method
+     * @param delivery delivery method (pick-up or home delivery)
+     */
     public void setDelivery(String delivery) {
         this.delivery.set(delivery);
     }
