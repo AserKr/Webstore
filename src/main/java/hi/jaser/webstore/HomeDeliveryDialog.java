@@ -42,7 +42,7 @@ private BooleanProperty isEmptyCVC = new SimpleBooleanProperty(true);
     public HomeDeliveryDialog() {
         setDialogPane(readDialog());
        pontunController= (PontunController) ViewSwitcher.lookup(View.PONTUN);
-       if (pontunController.getPassword()!=null){
+       if (pontunController.getPassword().getPassword()!=null){
           fxDate.setValue(pontunController.getDateOfBirth().getValue());
            fxName.setText(pontunController.getUser().getName());
            fxAddress.setText(pontunController.getUser().getAddress());
