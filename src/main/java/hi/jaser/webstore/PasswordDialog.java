@@ -1,18 +1,18 @@
 package hi.jaser.webstore;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.ButtonBar;
-import javafx.scene.control.Dialog;
-import javafx.scene.control.DialogPane;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import vinnsla.Password;
 
 import java.io.IOException;
 
 public class PasswordDialog extends Dialog<Password> {
     @FXML
-    TextField fxPass;
+    PasswordField fxPass;
+    @FXML
+    ToggleButton fxToggleVisual;
     private Password password;
     private PontunController pontunController;
 
@@ -20,6 +20,8 @@ public class PasswordDialog extends Dialog<Password> {
      * sets up the password dialog in which a user can enter their password.
      */
     public PasswordDialog() {
+
+
         setDialogPane(readPassDialog());
         pontunController = (PontunController) ViewSwitcher.lookup(View.PONTUN);
         password=new Password(fxPass.textProperty());
@@ -37,6 +39,20 @@ public class PasswordDialog extends Dialog<Password> {
 
         });
         setTitle("Password");
+
+
+        fxToggleVisual.addEventHandler(ActionEvent.ACTION, (ActionEvent e) -> {
+            if (fxToggleVisual.isSelected()) {
+                fxPass.setPromptText(fxPass.getText());
+                fxPass.setText("");
+                fxPass.setDisable(true);
+            } else {
+                fxPass.setText(fxPass.getPromptText());
+                fxPass.setPromptText("");
+                fxPass.setDisable(false);
+            }
+
+        });
     }
 
     /**
@@ -50,5 +66,9 @@ public class PasswordDialog extends Dialog<Password> {
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
+    }
+    @FXML
+    private void showPasswordHandler(ActionEvent e) {
+        pontunController.karfa.getObs().add(pontunController.menu.getObs().get(4));
     }
 }

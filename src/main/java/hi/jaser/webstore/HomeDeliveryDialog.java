@@ -55,7 +55,7 @@ private BooleanProperty isEmptyCVC = new SimpleBooleanProperty(true);
                     isEmptyCVC.set(false);
                 }
                 else if (newText.length() < 3) {
-                    isEmptyCard.set(true);
+                    isEmptyCVC.set(true);
                 }
                 return change;
             }
