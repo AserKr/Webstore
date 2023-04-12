@@ -22,6 +22,8 @@ public class CartController {
     Label totalPrice;
     @FXML
     Button fxRemove;
+    @FXML
+    Button fxStadfesting;
 
 
     private PontunController pontunController;
@@ -39,6 +41,7 @@ public class CartController {
      */
     @FXML
     private void initialize() {
+
         user = new Customer(new SimpleStringProperty(null), new SimpleStringProperty(null));
         pontunController = (PontunController) ViewSwitcher.lookup(View.PONTUN);
         totalPrice.textProperty().bind(pontunController.getFxTotalPrice().textProperty());
@@ -52,6 +55,16 @@ public class CartController {
         user.nameProperty().bind(pontunController.getUser().nameProperty());
         user.addressProperty().bind(pontunController.getUser().addressProperty());
         fxCurrencyBox.setItems(currencies);
+        fxStadfesting.setDisable(true);
+        pontunController.karfa.getObs().addListener((ListChangeListener<? super Products>) change -> {
+            if (pontunController.karfa.getsize()==0){
+                fxStadfesting.setDisable(true);
+            }
+            else {
+                fxStadfesting.setDisable(false);
+            }
+
+        });
 
         for (int i = 0; i < pontunController.karfa.getsize(); i++) {
             fxKarfa.getItems().add(pontunController.karfa.getObs().get(i));
@@ -90,10 +103,11 @@ public class CartController {
      */
     @FXML
     private void fxStadfestingHandler(ActionEvent e) {
-        /*pontunController.fxgreida.disableProperty().bind(pontunController.karfa.isemptyProperty());
-        ButtonType bType = new ButtonType(Okay,
-                ButtonBar.ButtonData.OK_DONE);*/
-        /*Alert a = stofnaAlert(bType);
+        //pontunController.fxgreida.disableProperty().bind(pontunController.karfa.isemptyProperty());
+
+        /*ButtonType bType = new ButtonType(Okay,
+                ButtonBar.ButtonData.OK_DONE);
+        Alert a = stofnaAlert(bType);
         a.showAndWait();*/
         ViewSwitcher.switchTo(View.DELIVERYMETHOD);
     }

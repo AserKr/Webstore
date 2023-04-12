@@ -16,7 +16,7 @@ public class HomeDeliveryDialog extends Dialog<Customer>{
     TextField fxName;
     @FXML
     TextField fxAddress;
-@FXML
+    @FXML
     DatePicker fxDate;
     @FXML
     TextField fxCardNumber;
