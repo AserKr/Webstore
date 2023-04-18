@@ -55,7 +55,13 @@ public class CartController {
         user.nameProperty().bind(pontunController.getUser().nameProperty());
         user.addressProperty().bind(pontunController.getUser().addressProperty());
         fxCurrencyBox.setItems(currencies);
-        fxStadfesting.setDisable(true);
+        if (pontunController.karfa.getsize() > 0) {
+            fxStadfesting.setDisable(false);
+        }
+        else {
+            fxStadfesting.setDisable(true);
+        }
+
         pontunController.karfa.getObs().addListener((ListChangeListener<? super Products>) change -> {
             if (pontunController.karfa.getsize()==0){
                 fxStadfesting.setDisable(true);

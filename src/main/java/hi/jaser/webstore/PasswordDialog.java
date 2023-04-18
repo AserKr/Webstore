@@ -44,8 +44,10 @@ public class PasswordDialog extends Dialog<Password> {
         fxToggleVisual.addEventHandler(ActionEvent.ACTION, (ActionEvent e) -> {
             if (fxToggleVisual.isSelected()) {
                 fxPass.setPromptText(fxPass.getText());
+                fxPass.setStyle("-fx-prompt-text-fill: black; -fx-font-weight: bold;");
                 fxPass.setText("");
                 fxPass.setDisable(true);
+
             } else {
                 fxPass.setText(fxPass.getPromptText());
                 fxPass.setPromptText("");

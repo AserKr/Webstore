@@ -88,6 +88,8 @@ private BooleanProperty isEmptyCVC = new SimpleBooleanProperty(true);
         Alert a = stofnaAlert(bType);
         a.showAndWait();
                 ViewSwitcher.switchTo(View.PONTUN);
+                int i= pontunController.karfa.getsize();
+                pontunController.karfa.getProducts().remove(0,i);
             }
             return null;
     });
