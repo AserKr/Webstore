@@ -44,7 +44,6 @@ public class DeliverymethodController {
     }
 
     private Alert makeAlert(ButtonType bILagi) {
-        // Væri hægt að segja Alert.AlertType.CONFIRMATION en þá stjórnum við ekki útliti hnappanna
         Alert a = new Alert(Alert.AlertType.NONE, message, bILagi);
         a.setTitle(nameofStore);
         a.setHeaderText(message1);

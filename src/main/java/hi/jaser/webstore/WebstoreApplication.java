@@ -13,7 +13,6 @@ public class WebstoreApplication extends Application {
     public void start(Stage stage) throws IOException {
 
         Scene scene = new Scene(new Pane());
-        //stage.initStyle(StageStyle.TRANSPARENT);
         ViewSwitcher.setScene(scene);
         ViewSwitcher.switchTo(View.PONTUN);
         stage.setScene(scene);

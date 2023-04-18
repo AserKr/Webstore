@@ -69,8 +69,5 @@ public class PasswordDialog extends Dialog<Password> {
             throw new RuntimeException(exception);
         }
     }
-    @FXML
-    private void showPasswordHandler(ActionEvent e) {
-        pontunController.karfa.getObs().add(pontunController.menu.getObs().get(4));
-    }
+
 }

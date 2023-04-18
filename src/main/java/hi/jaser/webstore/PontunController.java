@@ -11,16 +11,12 @@ import javafx.scene.image.ImageView;
 import vinnsla.*;
 
 public class PontunController {
-    @FXML
-    ListView fxKarfa;
+
     @FXML
     Button fxgreida;
     @FXML
     Label fxTotalPrice;
-    @FXML
-    Button fxTakaUrKorfu;
-    @FXML
-    Button fxSetjaKorfu;
+
     @FXML
     Button fxInnskraning;
 
@@ -75,15 +71,12 @@ public class PontunController {
         karfa.setCurrentCurrency("ISK");
         fxTotalPrice.setText("Total Price: 0");
         karfa.getObs().addListener((ListChangeListener<? super Products>) change -> {
-            System.out.println("Breyting");
             int heild = 0;
             for (int i = 0; i < karfa.getObs().size(); i++) {
                 heild = heild + karfa.getPrice(i);
             }
             karfa.setTotalPrice(heild);
             karfa.setCurrencyPrice(karfa.getCurrentCurrency());
-            System.out.println(fxTotalPrice);
-            System.out.println(heild);
         });
         fxTotalPrice.textProperty().bind(karfa.currencyPriceProperty());
     }

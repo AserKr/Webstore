@@ -26,13 +26,11 @@ public class HomeDeliveryDialog extends Dialog<Customer>{
     ButtonType fxILagi;
     @FXML
     TextField fxCVC;
-    public Customer getUser() {
-        return user;
-    }
+
+
 private BooleanProperty isEmptyCVC = new SimpleBooleanProperty(true);
     private BooleanProperty isEmptyCard = new SimpleBooleanProperty(true);
 
-    private Customer user;
     private PontunController pontunController;
     private static final String nameofStore = "Jaser Electronics";
     private static final String message1 = "Your Order Has been confirmed for delivery!";
@@ -99,7 +97,6 @@ private BooleanProperty isEmptyCVC = new SimpleBooleanProperty(true);
      * the rule to bind the Okay button in the dialog to the text fields
      */
     private void iLagiRegla() {
-        // fletta upp í lagi hnappnum út frá hnappategund
         Node iLagi = getDialogPane().lookupButton(fxILagi);
         iLagi.disableProperty()
                 .bind(fxAddress.textProperty().isEmpty()

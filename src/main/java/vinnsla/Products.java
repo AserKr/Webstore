@@ -24,10 +24,8 @@ public class Products {
     public String getPrice() {
         return price.get();
     }
-    public void setPrice(String price) {
-        this.price.set(price);
-    }
-    @Override
+
+
     public String toString() {
         return  name.getValue() + ", " + price.getValue();
     }

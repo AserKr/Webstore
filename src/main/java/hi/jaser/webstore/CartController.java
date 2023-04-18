@@ -12,8 +12,7 @@ import vinnsla.Products;
 import vinnsla.Customer;
 
 public class CartController {
-    @FXML
-    Label fxDelivery;
+
     @FXML
     Button fxGoBack;
     @FXML
@@ -28,7 +27,6 @@ public class CartController {
 
     private PontunController pontunController;
     private Customer user;
-    private int whichItemkarfa = 0;
     @FXML
     ComboBox fxCurrencyBox;
     ObservableList<String> currencies = FXCollections.observableArrayList("USD", "ISK", "EUR");
@@ -76,18 +74,10 @@ public class CartController {
             fxKarfa.getItems().add(pontunController.karfa.getObs().get(i));
         }
         pontunController.karfa.getObs().addListener((ListChangeListener<? super Products>) change -> {
-            /*   fxKarfa.getItems().add(pontunController.karfa.getObs().get(pontunController.karfa.getsize()-1));*/
             fxKarfa.setItems(pontunController.karfa.getObs());
-            System.out.println(fxKarfa.getItems().size());
-            System.out.println(pontunController.karfa.getsize());
             ;
         });
         fxCurrencyBox.setValue(null);
- /*fxKarfa.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-        fxKarfa.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-            // Indexinn í listanum.
-            whichItemkarfa = fxKarfa.getSelectionModel().getSelectedIndex();
-        });*/
         fxCurrencyBox.valueProperty().addListener((observable, oldValue, newValue) -> {
             pontunController.karfa.setCurrencyPrice(newValue.toString());
         });
@@ -109,12 +99,7 @@ public class CartController {
      */
     @FXML
     private void fxStadfestingHandler(ActionEvent e) {
-        //pontunController.fxgreida.disableProperty().bind(pontunController.karfa.isemptyProperty());
 
-        /*ButtonType bType = new ButtonType(Okay,
-                ButtonBar.ButtonData.OK_DONE);
-        Alert a = stofnaAlert(bType);
-        a.showAndWait();*/
         ViewSwitcher.switchTo(View.DELIVERYMETHOD);
     }
 
@@ -132,9 +117,6 @@ public class CartController {
         }
     }
 
-    public StringProperty deliveryProperty() {
-        return delivery;
-    }
 
     /**
      * Setter for the delivery method

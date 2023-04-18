@@ -18,9 +18,7 @@ public class CustomerDialog extends Dialog<Customer> {
     @FXML
      ButtonType fxILagi;
 
-    public Customer getUser() {
-        return user;
-    }
+
 
     private Customer user;
     private PontunController pontunController;
@@ -35,7 +33,7 @@ public class CustomerDialog extends Dialog<Customer> {
         user = new Customer(fxName.textProperty(), fxAddress.textProperty());
         setResultConverter(b -> {
             if (b.getButtonData() == ButtonBar.ButtonData.OK_DONE) {
-                System.out.println(user.getName());
+
                 pontunController.getUser().nameProperty().bind(user.nameProperty());
                 pontunController.getUser().addressProperty().bind(user.addressProperty());
                 pontunController.getDateOfBirth().valueProperty().bind(fxLoginBirth.valueProperty());
@@ -55,7 +53,6 @@ public class CustomerDialog extends Dialog<Customer> {
      * the rule to bind the Okay button in the dialog to the text fields
      */
     private void iLagiRegla() {
-        // fletta upp í lagi hnappnum út frá hnappategund
         Node iLagi = getDialogPane().lookupButton(fxILagi);
         iLagi.disableProperty()
                 .bind(fxAddress.textProperty().isEmpty()

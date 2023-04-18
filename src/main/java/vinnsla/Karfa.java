@@ -28,29 +28,14 @@ public class Karfa extends ProductList {
         return totalPrice.get();
     }
 
-    public IntegerProperty totalPriceProperty() {
-        return totalPrice;
-    }
 
     public void setTotalPrice(int totalPrice) {
         this.totalPrice.set(totalPrice);
     }
 
 
-    /**
-     * a method to check the emptyproperty of the cart
-     *
-     * @return returns a boolean property of whether the cart is empty or not;
-     */
-    public BooleanProperty isemptyProperty() {
-        isEmptyProp.set(this.getObs().isEmpty());
-        return isEmptyProp;
-    }
 
 
-    public String getCurrencyPrice() {
-        return currencyPrice.get();
-    }
 
     public StringProperty currencyPriceProperty() {
         return currencyPrice;

@@ -34,7 +34,7 @@ public class JobApplicationDialog extends Dialog<Customer> {
      * @return object of DialogPane
      */
     private DialogPane lesaJobApplicationDialog () {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("job-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(View.JOB.getFileName()));
         try {
             fxmlLoader.setController(this);
             return fxmlLoader.load();

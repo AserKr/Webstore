@@ -28,17 +28,14 @@ public class ViewSwitcher {
      */
     public static void switchTo(View view) {
         if (scene == null) {
-            System.out.println("No scene was set");
             return;
         }
         try {
             Parent root;
             FXMLLoader loader = null;
             if (cache.containsKey(view)) {
-                System.out.println("Loading from cache");
                 root = cache.get(view);
             } else {
-                System.out.println("Loading from FXML");
                 loader = new
                         FXMLLoader(ViewSwitcher.class.getResource(view.getFileName()));
                 root = loader.load();
